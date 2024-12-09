@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import { preinitModule } from "react-dom";
 
 interface DescriptionProps {
   id: string;
@@ -87,7 +86,6 @@ export const Descriptions = () => {
 
   return (
     <section id="Descriptions" className="container py-24 sm:py-8">
-
       {/* <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
         Pricing
       </h2>
@@ -102,35 +100,37 @@ export const Descriptions = () => {
 
       <div className="flex flex-col md:flex-row  gap-8">
         <div ref={descriptionRefs} className="md:w-2/5 flex flex-col gap-8">
-          {descriptionList.map(({ id,image, tag, title, description }, index) => (
-            <div
-              key={title}
-              className={`md:h-[90vh]  flex flex-col items-center mb-8 md:mb-0 md:gap-0 md:flex-row   ${
-                index === descriptionList.length - 1 && "md:h-[100vh]"
-              }`}
-            >
-              <Card className="flex flex-col text-center md:text-left items-center md:items-start md:w-96 gap-2">
-                {tag && <Badge className="w-fit">{tag}</Badge>}
-                <CardTitle className="">{title}</CardTitle>
-                <CardContent className="text-muted-foreground px-0">
-                  {description}
-                </CardContent>
-              </Card>
+          {descriptionList.map(
+            ({ id, image, tag, title, description }, index) => (
+              <div
+                key={title}
+                className={`md:h-[90vh]  flex flex-col items-center mb-8 md:mb-0 md:gap-0 md:flex-row   ${
+                  index === descriptionList.length - 1 && "md:h-[100vh]"
+                }`}
+              >
+                <Card className="flex flex-col text-center md:text-left items-center md:items-start md:w-96 gap-2">
+                  {tag && <Badge className="w-fit">{tag}</Badge>}
+                  <CardTitle className="">{title}</CardTitle>
+                  <CardContent className="text-muted-foreground px-0">
+                    {description}
+                  </CardContent>
+                </Card>
 
-              <div className="relative md:hidden w-full h-[300px]">
-                <Image
-                  fill
-                  key={id}
-                  className="object-contain mx-auto leading-none flex items-center"
-                  // onLoad={(image) =>
-                  //   image.currentTarget.classList.remove("opacity-25")
-                  // }
-                  src={image}
-                  alt={title}
-                />
+                <div className="relative md:hidden w-full h-[300px]">
+                  <Image
+                    fill
+                    key={id}
+                    className="object-contain mx-auto leading-none flex items-center"
+                    // onLoad={(image) =>
+                    //   image.currentTarget.classList.remove("opacity-25")
+                    // }
+                    src={image}
+                    alt={title}
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
 
         {/* 图片容器 */}
