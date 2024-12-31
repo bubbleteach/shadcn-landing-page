@@ -7,6 +7,8 @@ import { ThemeProvider } from "@/components/layout/theme-provider";
 import { FooterSection } from "@/components/layout/sections/footer";
 const inter = Inter({ subsets: ["latin"] });
 import { CookieConsent } from "@/components/cookie-consent/cookie-consent";
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 // export const metadata: Metadata = {
 //   title: "Grimo - Reimagine Word Processor",
 //   description: "Your All-in-one Writing Interface for Better Writing",
@@ -28,6 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" suppressHydrationWarning>
+      <GoogleAnalytics gaId="GTM-TQVNTXZ8" />
       <body className={cn("min-h-screen bg-background", inter.className)}>
         <ThemeProvider
           attribute="class"
