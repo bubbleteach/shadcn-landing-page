@@ -92,20 +92,7 @@ export const Navbar = () => {
               loading="eager"
             />
           </Link>
-          {/* <!-- Desktop --> */}
-          <NavigationMenu className="hidden md:block">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                {routeList.map(({ href, label }) => (
-                  <NavigationMenuLink key={href} asChild>
-                    <Link href={href} className="text-base px-2">
-                      {label}
-                    </Link>
-                  </NavigationMenuLink>
-                ))}
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+          
         </div>
 
         {/* <!-- Mobile --> */}
@@ -156,7 +143,7 @@ export const Navbar = () => {
           </Sheet>
         </div>
         {/* Right Button */}
-        <div className="hidden md:flex justify-end">
+        <div className="hidden md:flex justify-end items-center gap-4">
           {/* <ToggleTheme /> */}
 
           {/* <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
@@ -174,6 +161,21 @@ export const Navbar = () => {
             About
           </Link>
         </Button> */}
+
+            {/* <!-- Desktop --> */}
+            <NavigationMenu className="hidden md:block">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                {routeList.map(({ href, label }) => (
+                  <NavigationMenuLink key={href} asChild>
+                    <Link href={href} className="text-base px-2">
+                      {label}
+                    </Link>
+                  </NavigationMenuLink>
+                ))}
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
           <Button asChild variant="outline" className="w-fit" size="sm">
             <Link aria-label="grimo" href="http://go.grimo.ai" target="_blank">

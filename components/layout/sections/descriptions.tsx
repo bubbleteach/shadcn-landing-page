@@ -55,8 +55,9 @@ export const Descriptions = () => {
     const targetNode = descriptionRefs.current;
 
     const handleScroll = () => {
+      // console.log(targetNode);
       if (!targetNode) return;
-
+      
       const children = targetNode.children;
       for (let i = 0; i < children.length; i++) {
         const child = children[i];
@@ -69,9 +70,6 @@ export const Descriptions = () => {
           break;
         }
       }
-      // console.log("------");
-      // console.log(window.innerHeight);
-      // console.log("---");
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -85,67 +83,71 @@ export const Descriptions = () => {
   }, []);
 
   return (
-    <section id="Descriptions" className="container py-24 sm:py-8">
-      {/* <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-        Pricing
-      </h2>
+    <section id="Descriptions" className=" bg-brand/[0.02] mt-36">
+      <div className="container py-24 sm:py-8">
+        {/* <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
+          Pricing
+        </h2>
 
-      <h2 className="text-3xl md:text-4xl text-center font-semibold mb-4">
-        Simple Pricing, No Add-ons
-      </h2>
+        <h2 className="text-3xl md:text-4xl text-center font-semibold mb-4">
+          Simple Pricing, No Add-ons
+        </h2>
 
-      <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14">
-        Cancel Anytime
-      </h3> */}
+        <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14">
+          Cancel Anytime
+        </h3> */}
 
-      <div className="flex flex-col md:flex-row  gap-8">
-        <div ref={descriptionRefs} className="md:w-2/5 flex flex-col gap-8">
-          {descriptionList.map(
-            ({ id, image, tag, title, description }, index) => (
-              <div
-                key={title}
-                className={`md:h-[90vh]  flex flex-col items-center mb-8 md:mb-0 md:gap-0 md:flex-row   ${
-                  index === descriptionList.length - 1 && "md:h-[100vh]"
-                }`}
-              >
-                <Card className="flex flex-col text-center md:text-left items-center md:items-start md:w-96 gap-2">
-                  {tag && <Badge className="w-fit">{tag}</Badge>}
-                  <CardTitle className="">{title}</CardTitle>
-                  <CardContent className="text-muted-foreground px-0">
-                    {description}
-                  </CardContent>
-                </Card>
+        <div className="flex flex-col md:flex-row  gap-12 px-8 roud">
+          <div ref={descriptionRefs} className="md:w-2/5 flex flex-col gap-8">
+            {descriptionList.map(
+              ({ id, image, tag, title, description }, index) => (
+                <div
+                  key={title}
+                  className={`md:h-[90vh] pr-4  flex flex-col items-center mb-8 md:mb-0 md:gap-0 md:flex-row   ${
+                    index === descriptionList.length - 1 && "md:h-[100vh]"
+                  }`}
+                >
+                  <Card className="flex flex-col text-center md:text-left shadow-none items-center md:items-start gap-2 bg-none! border-none">
+                    {tag && <Badge variant={"brand"} className="w-fit">{tag}</Badge>}
+                    <CardTitle className="">{title}</CardTitle>
+                    <CardContent className="text-muted-foreground px-0">
+                      {description}
+                    </CardContent>
+                  </Card>
 
-                <div className="relative md:hidden w-full h-[300px]">
-                  <Image
-                    fill
-                    key={id}
-                    className="object-contain mx-auto leading-none flex items-center"
-                    // onLoad={(image) =>
-                    //   image.currentTarget.classList.remove("opacity-25")
-                    // }
-                    src={image}
-                    alt={title}
-                  />
+                  <div className="relative md:hidden w-full h-[300px]">
+                    <Image
+                      fill
+                      key={id}
+                      className="object-contain mx-auto leading-none flex items-center"
+                      // onLoad={(image) =>
+                      //   image.currentTarget.classList.remove("opacity-25")
+                      // }
+                      src={image}
+                      alt={title}
+                    />
+                  </div>
                 </div>
-              </div>
-            )
-          )}
-        </div>
+              )
+            )}
+          </div>
 
-        {/* 图片容器 */}
-        <div className="hidden md:flex w-1/2 h-screen flex-1 justify-center sticky top-0 items-center">
-          <div className="w-full h-[500px] relative">
-            <Image
-              fill
-              key={descriptionList[activeIndex]["id"]}
-              className="ransition-opacity opacity-25 duration-300 ease-in-out object-contain mx-auto  leading-none flex items-center"
-              onLoad={(image) =>
-                image.currentTarget.classList.remove("opacity-25")
-              }
-              src={descriptionList[activeIndex]["image"]}
-              alt={descriptionList[activeIndex]["title"]}
-            />
+          {/* 图片容器 */}
+          <div className="hidden md:flex w-1/2 h-screen flex-1 justify-end sticky top-0 items-center">
+            <div className="w-full h-full relative">
+              <Image
+                fill
+                // width={500}
+                // height={500}
+                key={descriptionList[activeIndex]["id"]}
+                className="ransition-opacity opacity-25 duration-300 ease-in-out object-contain leading-none flex items-center"
+                onLoad={(image) =>
+                  image.currentTarget.classList.remove("opacity-25")
+                }
+                src={descriptionList[activeIndex]["image"]}
+                alt={descriptionList[activeIndex]["title"]}
+              />
+            </div>
           </div>
         </div>
       </div>
