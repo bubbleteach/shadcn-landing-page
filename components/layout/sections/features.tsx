@@ -17,9 +17,9 @@ const featureList: FeaturesProps[] = [
   },
   {
     icon: "Brain",
-    title: "Personalized Rewriting",
+    title: "Shared Memory for Writing",
     description:
-      "By learning what you like, GrimoAI rewrites as you expect, probably better than anywhere else.",
+      "Learn your writing preference from your writing, improving coherence and personalization.",
   },
   {
     icon: "Handshake",
