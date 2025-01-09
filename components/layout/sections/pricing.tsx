@@ -30,28 +30,27 @@ const plans: PlanProps[] = [
     title: "Writer",
     popular: 0,
     price: 20,
-    description: "For AI-assisted content writing.",
+    description: "For power writers and editors",
     buttonText: "Get Started",
     buttonLink: "http://go.grimo.ai",
     benefitList: [
-      "Access to Write, Search, Refine",
-      "Powered by Claude 3.5 Sonnet",
+      "Write/Edit/Comment with AI",
+      "Unlimited AI Usage (Claude 3.5 Sonnet)",
       "Unlimited storage",
-      "Unlimited history",
     ],
   },
   {
     title: "Editor",
     popular: 1,
     price: 40,
-    description: "For professionals with strong editing demand.",
+    description: "For teams collaborating on content",
     buttonText: "Start Free Trial",
     buttonLink: "http://go.grimo.ai",
     benefitList: [
-      "Everything in Writer plus",
-      "Access to Edit / Edit+",
-      "Access to Advance Preset and Sharing.",
-      // "Powered by Claude 3.5 Sonnet.",
+      "Everything in Pro plus",
+      "Real-time Collaboration",
+      "Initial Deployment Support",
+      "Access Control - Editor (Coming Soon...)",
     ],
   },
   {
@@ -62,11 +61,11 @@ const plans: PlanProps[] = [
     buttonText: "Contact US",
     buttonLink: "mailto:dev@grimo.ai",
     benefitList: [
-      "Advanced Security & Controls",
-      "Customized Preset",
-      "Team Analytics",
-      "Free Coaching",
-      "Dedicated Support",
+      "Everything in Team plus",
+      "Weekly Deployment Support",
+      "Advanced Security & Analytics (Coming Soon...)",
+      "Access Control - Memory (Coming Soon...)",
+      // "Dedicated Support",
     ],
   },
 ];
@@ -114,12 +113,23 @@ export const PricingSection = () => {
                 </CardDescription>
 
                 <div>
-                  {price > -1 && (
-                    <>
-                      <span className="text-3xl font-bold">${price}</span>
-                      <span className="text-muted-foreground"> /month</span>
-                    </>
-                  )}
+                  
+                  <div>
+                    <span className="text-3xl font-bold">{price > -1?'$'+price:'--'}</span>
+                    <span className="text-muted-foreground"> /month</span>
+                  </div>
+                  
+                  <Button
+                    asChild
+                    variant={
+                      popular === PopularPlan?.YES ? "default" : "outline"
+                    }
+                    className="w-full mt-6"
+                  >
+                    <Link target="_blank" href={buttonLink}>
+                      {buttonText}
+                    </Link>
+                </Button>
                 </div>
               </CardHeader>
 
@@ -134,7 +144,7 @@ export const PricingSection = () => {
                 </div>
               </CardContent>
 
-              <CardFooter>
+              {/* <CardFooter>
                 <Button
                   asChild
                   variant={
@@ -146,7 +156,7 @@ export const PricingSection = () => {
                     {buttonText}
                   </Link>
                 </Button>
-              </CardFooter>
+              </CardFooter> */}
             </Card>
           )
         )}
