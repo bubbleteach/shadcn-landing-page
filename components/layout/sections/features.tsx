@@ -10,41 +10,41 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "Search",
-    title: "Search anywhere",
+    icon: "PencilLine",
+    title: "Customized Writing Style",
     description:
-      "No need to switch between multiple windows. Find what you need from any location within the Grimo.",
+      "Say goodbye to AI slops and seamlessly switch between various writing styles that you can customize.",
   },
   {
-    icon: "PencilLine",
+    icon: "Brain",
     title: "Personalized Rewriting",
     description:
       "By learning what you like, GrimoAI rewrites as you expect, probably better than anywhere else.",
   },
   {
-    icon: "Brain",
-    title: "Smart Editing",
+    icon: "Handshake",
+    title: "Version Control of Prompts",
     description:
-      "Get real-time suggestions on your writing. More than grammer and styling.",
+      "Bring Traceability to collaborative AI writing, making it easier for teams to manage their prompt asset.",
   },
-  // {
-  //   icon: "PictureInPicture",
-  //   title: "Strong Visuals",
-  //   description:
-  //     "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
-  // },
-  // {
-  //   icon: "MousePointerClick",
-  //   title: "Clear CTA",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
-  // },
-  // {
-  //   icon: "Newspaper",
-  //   title: "Clear Headline",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
-  // },
+  {
+    icon: "Search",
+    title: "Web Search anywhere",
+    description:
+      "Ensure that all generated content is grounded with reliable, up-to-date sources",
+  },
+  {
+    icon: "BookText",
+    title: "Knowledge Base",
+    description:
+      "Leverage your own data to enhance accuracy and consistency.",
+  },
+  {
+    icon: "Users",
+    title: "Real-time Collaboration",
+    description:
+      "Allow your whole team and AI to write, edit or comment in one doc.",
+  },
 ];
 
 export const FeaturesSection = () => {

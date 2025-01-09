@@ -26,22 +26,22 @@ export const HeroSection = () => {
               {/* <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
                 Reimagine
               </span> */}
-              Reimagine Word Processor
+              Writing like Coding
             </h1>
           </div>
 
           <p className="max-w-screen-sm text-lg lg:text-xl text-muted-foreground">
-            {`Your All-in-one Writing Interface for Better Writing.`}
+            {`Your AI Content Pipeline in one place`}
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
             <Button asChild className="w-5/6 md:w-1/4 font-bold group/arrow">
               <Link
-                aria-label="Start Writing"
-                href="http://go.grimo.ai"
+                aria-label="Build Your Words"
+                href="http://app.grimo.ai"
                 target="_blank"
               >
-                Start Writing
+                Build Your Words
               </Link>
               {/* <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" /> */}
             </Button>
@@ -71,7 +71,7 @@ export const HeroSection = () => {
                 height={1200}
                 className="w-full mx-auto rounded-lg rouded-lg leading-none items-center  border-secondary  border-t-primary/30"
                 src={
-                  theme === "light" ? "/grimo/comment.png" : "/grimo/comment.png"
+                  theme === "light" ? "/grimo/hero.png" : "/grimo/hero.png"
                 }
                 alt="dashboard"
               />
