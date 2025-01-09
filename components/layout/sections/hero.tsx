@@ -9,7 +9,7 @@ import Link from "next/link";
 export const HeroSection = () => {
   const { theme } = useTheme();
   return (
-    <section className="container w-full mt-8 h-[38rem]">
+    <section className="container w-full my-8 2xl:mb-20 h-[38rem]">
       <div className="flex flex-col items-center lg:pl-8 md:flex-row h-full gap-8 md:gap-0">
 
         {/* text */}
@@ -35,7 +35,7 @@ export const HeroSection = () => {
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
-            <Button asChild className="w-5/6 md:w-1/4 font-bold group/arrow">
+            <Button asChild className="w-5/6 w-fit font-bold group/arrow">
               <Link
                 aria-label="Build Your Words"
                 href="http://app.grimo.ai"
@@ -64,11 +64,12 @@ export const HeroSection = () => {
         {/* Image */}
         <div className=" md:w-7/12 max-w-5xl h-full group md:mt-14 right-0 md:overflow-hidden flex flex-1 items-center">
           {/* <div className="absolute top-2 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-24 lg:h-80 bg-primary/35 rounded-full blur-3xl"></div> */}
-          <div className="  md:absolute overflow-hidden 2xl:top-32">
+          <div className="  md:absolute overflow-hidden 2xl:top-32 2xl:right-0">
             <div className="md:translate-x-20">
               <Image
-                width={1200}
-                height={1200}
+                // fill
+                width={1000}
+                height={1000}
                 className="w-full mx-auto rounded-lg rouded-lg leading-none items-center  border-secondary  border-t-primary/30"
                 src={
                   theme === "light" ? "/grimo/hero.png" : "/grimo/hero.png"
@@ -76,7 +77,7 @@ export const HeroSection = () => {
                 alt="dashboard"
               />
               </div>
-            {/* <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"></div> */}
+            <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"></div>
           </div>
 
           
