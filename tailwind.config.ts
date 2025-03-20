@@ -103,6 +103,18 @@ module.exports = {
         "slideLeft": {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        scanline: {
+          '0%': { top: '0%' },
+          '100%': { top: '100%' },
+          },
+        flicker: {
+          '0%': { opacity: '1' },
+          '3%': { opacity: '0.8' },
+          '6%': { opacity: '1' },
+          '7%': { opacity: '0.8' },
+          '8%': { opacity: '1' },
+          '100%': { opacity: '1' },
         }
       },
       animation: {
@@ -111,7 +123,8 @@ module.exports = {
         "collapsible-down": "collapsible-down 0.2s ease-in-out",
         "collapsible-up": "collapsible-up 0.2s ease-in-out",
         'slide-left': 'slideLeft 5s linear infinite',
-
+        'scanline': 'scanline 4s linear infinite',
+        flicker: 'flicker 3s infinite'
       },
       backgroundImage: {
         'screen-on': "url('/computer/computer_screen_on.svg')",
