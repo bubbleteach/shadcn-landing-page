@@ -113,6 +113,10 @@ module.exports = {
         'slide-left': 'slideLeft 5s linear infinite',
 
       },
+      backgroundImage: {
+        'screen-on': "url('/computer/computer_screen_on.svg')",
+        'screen-off': "url('/computer/computer_screen_off.svg')",
+      }
     },
   },
   plugins: [animate, require('@tailwindcss/typography'),

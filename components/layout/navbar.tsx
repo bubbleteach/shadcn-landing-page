@@ -95,13 +95,13 @@ export const Navbar = () => {
 
   return (
     <header className={
-      `md:w-full py-0 md:py-2 bg-sidebar-background ${isScrolled ? 'border-b' : 'border-none'}  border-border sticky top-0 flex justify-center bg-opacity-15 z-40 `}>
+      `md:w-full py-0 md:py-2 bg-sidebar-background border-b  border-border sticky top-0 flex justify-center bg-opacity-15 z-40 `}>
         <div 
           className={`
             w-full 
             transition-all duration-500 ease-in-out 
             px-4 md:px-16 py-2 md:py-0
-            ${isScrolled ? 'max-w-6xl' : 'max-w-full'}
+            max-w-6xl
             flex items-center justify-center
           `}
         >
