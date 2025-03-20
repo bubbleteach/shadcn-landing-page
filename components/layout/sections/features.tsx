@@ -84,10 +84,10 @@ export const FeaturesSection = () => {
 
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
         {featureList.map(({ icon, title, description,iconColor }) => (
-          <div key={title} className=" flex gap-4 items-start p-4 md:p-6 border border-border bg-background rounded">
+          <div key={title} className=" flex gap-4 items-start p-2 md:p-6 border border-border bg-background rounded">
             <div className = "pt-1">
               <Icon
-                name={icon as keyof typeof icons}
+                name={icon as any}
                 size={24}
                 color={iconColor} // Using the iconColor from the featureList
                 className="text-primary"
