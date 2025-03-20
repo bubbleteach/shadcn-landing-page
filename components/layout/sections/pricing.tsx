@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
@@ -72,21 +73,21 @@ const plans: PlanProps[] = [
 
 export const PricingSection = () => {
   return (
-    <section id="pricing" className="container py-24 sm:py-32">
-      <div className="px-6">
-      <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
+    <section id="pricing" className="container ">
+      <div className="">
+      {/* <h2 className="text-lg text-primary mb-2 tracking-wider">
         Pricing
-      </h2>
+      </h2> */}
 
-      <h2 className="text-3xl md:text-4xl text-center font-semibold mb-4">
+      <h2 className="text-2xl md:text-3xl font-semibold mb-4">
         Simple Pricing, No Add-ons
       </h2>
 
-      <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14">
+      <h3 className="mx-auto text-xl text-muted-foreground pb-14">
         Cancel Anytime
       </h3>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {plans.map(
           ({
             title,
@@ -99,13 +100,29 @@ export const PricingSection = () => {
           }) => (
             <Card
               key={title}
-              className={
-                popular === PopularPlan?.YES
-                  ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]"
-                  : ""
-              }
+              className="border border-border bg-background"
+              // className={
+              //   popular === PopularPlan?.YES
+              //     ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]"
+              //     : ""
+              // }
             >
+
+
               <CardHeader>
+
+              {popular===PopularPlan?.YES && 
+                  <div className="relative">
+                    <Badge 
+                      variant="paper" 
+                      className="w-fit absolute top-[-2rem] right-0 text-xl shadow" 
+                      style={{ transform: 'rotate(10deg)' }}
+                    >
+                      Popular
+                    </Badge>
+                  </div>
+                }
+
                 <CardTitle className="pb-2">{title}</CardTitle>
 
                 <CardDescription className="pb-4">
@@ -143,6 +160,8 @@ export const PricingSection = () => {
                   ))}
                 </div>
               </CardContent>
+
+
 
               {/* <CardFooter>
                 <Button

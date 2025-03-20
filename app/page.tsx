@@ -12,6 +12,9 @@ import { SponsorsSection } from "@/components/layout/sections/sponsors";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 
 import { Descriptions } from "@/components/layout/sections/descriptions";
+import { CtaBanner } from "@/components/layout/sections/ctaBanner";
+import {SuperDuperContent} from "@/components/layout/sections/superDuperContent";
+import {OutputExample} from "@/components/layout/sections/outputExample";
 
 export default function Home() {
   return (
@@ -20,12 +23,15 @@ export default function Home() {
       {/* <Descriptions /> */}
       {/* <SponsorsSection /> */}
       {/* <BenefitsSection /> */}
+      <SuperDuperContent/>
+      <OutputExample/>
       <FeaturesSection />
       {/* <ServicesSection /> */}
       {/* <TestimonialSection /> */}
       {/* <TeamSection /> */}
       {/* <CommunitySection /> */}
       <PricingSection />
+      <CtaBanner/>
       {/* <ContactSection /> */}
       {/* <FAQSection /> */}
     </>
