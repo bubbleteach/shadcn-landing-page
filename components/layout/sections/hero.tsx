@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import { Computer } from "@/components/ui/computer";
 
 export const HeroSection = () => {
   const { theme } = useTheme();
@@ -27,6 +28,7 @@ export const HeroSection = () => {
 
   return (
     <section className="container w-full my-32">
+      
       <div 
         style={{ 
           position: 'absolute',
@@ -44,10 +46,11 @@ export const HeroSection = () => {
         }}
       />
       <div className="flex flex-col items-center h-full gap-8 md:gap-0">
-
-        {/* text */}
+        
+        
+        
         <div className="text-center space-y-4 md:space-y-8 flex-1 flex flex-col gap-4 items-center">
-          <Badge variant="brand" className="w-fit rounded-full">
+          {/* <Badge variant="brand" className="w-fit rounded-full">
             <p className="text-sm py-2 text-center font-semibold text-brand flex items-center gap-2 justify-center">
             <Icon
               name="Sparkles"
@@ -57,13 +60,17 @@ export const HeroSection = () => {
               />
               Reimagine Word Processor
             </p>
-            </Badge>
+            </Badge> */}
+          
+          <Computer/>
+          
+          {/* text */}
           <div className="max-w-screen-lg text-4xl lg:text-6xl font-semibold">
             <h1>
               {/* <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
                 Reimagine
               </span> */}
-              {`Writing like `}
+              {`Cursor for `}
               <span 
                 className="relative"
                 style={{
@@ -74,7 +81,7 @@ export const HeroSection = () => {
                   paddingBottom: '8px', // 为下划线留出空间
                 }}
               >
-                Coding
+                Writing
               </span>
             </h1>
           </div>

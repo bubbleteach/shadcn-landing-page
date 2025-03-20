@@ -84,7 +84,7 @@ export const Computer = () => {
       
 
     return (
-            <div className="absolute right-16 top-1/2 shadow-xl">
+            <div className="w-fit">
 
                 {showGlitch && (
                     <div className="glitch-overlay visible">
@@ -94,20 +94,20 @@ export const Computer = () => {
 
                 {/* <div className="distortion-overlay pointer-events-none" /> */}
 
-                
-                <div className={` ${showGlitch?' hidden':'visible'} relative flex items-center justify-center cursor-pointer`} onClick={handleComputerClick}>
+
+                <div className={` ${showGlitch?' hidden':'visible'} relative flex items-center justify-center cursor-pointer shadow-xl`} onClick={handleComputerClick}>
                     {/* Computer Base */}
                     <div>
                         <Image
                             src="/computer/computer_main.svg"
-                            alt="Pencil Icon"
+                            alt="computer_main"
                             width={124}
                             height={24}
                             priority
                         />
                     </div>
                     {/* Computer Screen */}
-                    <div className={` absolute overflow-hidden flex items-center justify-center top-3 bg-cover bg-no-repeat w-[110px] h-[82px]`}>
+                    <div className={` animate-flicker absolute overflow-hidden flex items-center justify-center top-3 bg-cover bg-no-repeat w-[110px] h-[82px]`}>
                         {/* Screen */}
                         <Image
                             src={isPowerOn ? "/computer/computer_screen_on.svg" : "/computer/computer_screen_off.svg"}
@@ -116,12 +116,15 @@ export const Computer = () => {
                             height={110 * 0.75} // 假设宽高比为4:3
                             priority
                         />
+                        <div className={`overflow-hidden absolute top-[6%] h-[88%] w-[91%]`}>
+                            <div className="absolute top-0 left-0 w-full h-[2px] bg-[rgba(51,255,51,0.2)] z-[2] opacity-75 pointer-events-none animate-scanline" />
+                        </div>
                         {/* Screen Content */}
                         <div className={`overflow-hidden absolute top-[6%] h-[88%] w-[91%] ${isPowerOn?'opacity-100':'opacity-0'}`}>
                             <Image
                                 className={`relative transition-transform duration-1000 ease-linear ${isPowerOn?'-translate-y-[400px]':'translate-y-0'}`}
                                 src="/computer/computer_content.svg"
-                                alt="Pencil Icon"
+                                alt="computer_content"
                                 width={110}
                                 height={570}
                                 priority

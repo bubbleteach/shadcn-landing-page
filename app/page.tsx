@@ -15,12 +15,10 @@ import { Descriptions } from "@/components/layout/sections/descriptions";
 import { CtaBanner } from "@/components/layout/sections/ctaBanner";
 import {SuperDuperContent} from "@/components/layout/sections/superDuperContent";
 import {OutputExample} from "@/components/layout/sections/outputExample";
-import { Computer } from "@/components/layout/sections/computer";
 
 export default function Home() {
   return (
     <>
-      <Computer/>
       <HeroSection />
       
       {/* <Descriptions /> */}
