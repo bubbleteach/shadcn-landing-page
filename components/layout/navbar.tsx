@@ -1,6 +1,6 @@
 "use client";
 import { ChevronsDown, Github, Menu } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -52,6 +52,10 @@ const routeList: RouteProps[] = [
     label: "Pricing",
   },
   // {
+  //   href: "/playground",
+  //   label: "Playground",
+  // },
+  // {
   //   href: "/#faq",
   //   label: "FAQ",
   // },
@@ -76,23 +80,44 @@ const featureList: FeatureProps[] = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="md:w-full py-4 md:py-2 bg-background border-b border-border sticky top-0 flex justify-center bg-opacity-15 z-40 ">
-      <div className="w-full px-6 md:px-14 max-w-[1400px] flex items-center justify-center ">
+    <header className={
+      `md:w-full py-0 md:py-2 bg-sidebar-background ${isScrolled ? 'border-b' : 'border-none'}  border-border sticky top-0 flex justify-center bg-opacity-15 z-40 `}>
+        <div 
+          className={`
+            w-full 
+            transition-all duration-500 ease-in-out 
+            px-4 md:px-16 py-2 md:py-0
+            ${isScrolled ? 'max-w-6xl' : 'max-w-full'}
+            flex items-center justify-center
+          `}
+        >
         {/* Nav */}
         <div className="flex flex-1 items-center gap-2">
           <Link href="/" className="font-bold text-lg flex items-center gap-2">
             {/* <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" /> */}
             <Image
-              width={72}
-              height={72}
+              width={24}
+              height={24}
               // className="mx-auto rounded-lg relative rouded-lg leading-none flex items-center  border-secondary  border-t-primary/30"
               src="/grimo/grimo_logo.png"
               alt="grimo"
               loading="eager"
             />
           </Link>
-          
         </div>
 
         {/* <!-- Mobile --> */}
