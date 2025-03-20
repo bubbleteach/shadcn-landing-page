@@ -223,7 +223,83 @@ html {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-sidebar-background text-foreground;
+  }
+}
+
+
+
+.glitch-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  color: #0f0;
+  font-family: monospace;
+  /* white-space: pre; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 2rem; */
+  z-index: 9999;
+  /* 高于其他元素 */
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+  /* 不阻断鼠标事件 */
+}
+
+.glitch-overlay.visible {
+  opacity: 0.7;
+}
+
+.glitch-overlay.hidden {
+  opacity: 0;
+}
+
+/* 2) 背景反转(之前示例同样) */
+.invert-bg {
+  filter: invert(100%) hue-rotate(180deg);
+  transition: filter 1s ease;
+}
+
+/* 3) ▼ 新增扭曲/扫描线/老旧效果 */
+
+/* distortion-overlay: CRT扫描线 + 轻微缩放抖动 实现老旧屏幕感 */
+.distortion-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  /* 盖在屏幕内容上，但低于任何前景元素 */
+  background: repeating-linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 2px,
+      transparent 2px,
+      transparent 4px);
+  mix-blend-mode: overlay;
+
+  /* 老旧模拟: 色差/亮度/对比 */
+  backdrop-filter: contrast(1.2) brightness(1.05);
+
+  /* 动画: 轻微水平scale抖动 */
+  animation: crtDistort 0.08s infinite;
+}
+
+/* keyframe: scale X 轴重复晃动 */
+@keyframes crtDistort {
+  0% {
+    transform: scaleX(1.000);
+  }
+
+  50% {
+    transform: scaleX(1.002);
+  }
+
+  100% {
+    transform: scaleX(1.000);
   }
 }
