@@ -30,7 +30,7 @@ export const Computer = () => {
                 intervalRef.current = window.setInterval(() => {
                     updateCount++;
 
-                    if (updateCount >= 10){
+                    if (updateCount = 8){
                         window.location.href = 'https://dev.grimo.ai/playground';
                     }
 
@@ -87,7 +87,7 @@ export const Computer = () => {
             <div className="w-fit">
 
                 {showGlitch && (
-                    <div className="glitch-overlay visible">
+                    <div className="glitch-overlay visible text-left">
                     {glitchText}
                     </div>
                 )}
