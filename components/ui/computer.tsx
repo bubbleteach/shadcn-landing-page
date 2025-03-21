@@ -30,7 +30,7 @@ export const Computer = () => {
                 intervalRef.current = window.setInterval(() => {
                     updateCount++;
 
-                    if (updateCount = 8){
+                    if (updateCount = 10){
                         window.location.href = 'https://dev.grimo.ai/playground';
                     }
 
@@ -73,10 +73,10 @@ export const Computer = () => {
         // 创建多行随机字符
         for (let i = 0; i < 125; i++) {
           let line = '';
-          for (let j = 0; j < 180; j++) {
+          for (let j = 0; j < 200; j++) {
             line += chars.charAt(Math.floor(Math.random() * chars.length));
           }
-          result += line + '\n';
+          result += line;
         }
         
         return result;
