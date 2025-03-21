@@ -27,7 +27,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="container w-full my-32">
+    <section className="container w-full my-16 md:my-32">
       
       <div 
         style={{ 
