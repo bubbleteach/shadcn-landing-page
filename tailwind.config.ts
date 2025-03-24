@@ -15,13 +15,17 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      margin:{"DEFAULT":"10px"},
       padding: {
         "DEFAULT": "16px",
-        "2xl": "64px",
+        "md": "64px",
+        // "md": "64px",
+        // "lg": "64px",
+        // "xl": "64px",
       },
-      screens: {
-        "2xl": "1152px",
-      },
+      // screens: {
+      //   'lg': '1111px',  // 容器最大宽度为 1152px
+      // },
     },
     extend: {
       colors: {
@@ -124,7 +128,7 @@ module.exports = {
         "collapsible-up": "collapsible-up 0.2s ease-in-out",
         'slide-left': 'slideLeft 5s linear infinite',
         'scanline': 'scanline 4s linear infinite',
-        flicker: 'flicker 3s infinite'
+        flicker: 'flicker 4s infinite'
       },
       backgroundImage: {
         'screen-on': "url('/computer/computer_screen_on.svg')",

@@ -12,45 +12,38 @@ interface FeaturesProps {
 const featureList: FeaturesProps[] = [
   {
     icon: "PencilLine",
-    title: "Customized Writing Style",
+    title: "Edit with AI. Anywhere",
     description:
-      "Say goodbye to AI slops and seamlessly switch between various writing styles that you can customize.",
+      "The Strongest AI Text Editor, powered by latest AI models including DeepSeek R1, Claude 3.7 Sonnet, OpenAI GPT4, o3-mini, etc.",
     iconColor: "hsla(25, 95%, 63%, 1)", // Added icon color
   },
   {
-    icon: "Brain",
-    title: "Shared Memory for Writing",
+    icon: "Cable",
+    title: "Web Search, File, Reddit. Just Here",
     description:
-      "Learn your writing preference from your writing, improving coherence and personalization.",
+      "Access credible sources, and write with confidence. P.S. See what you can do with MCP.",
     iconColor: "hsla(250, 40%, 50%, 1)", // Added icon color
   },
   {
-    icon: "Handshake",
-    title: "Version Control of Prompts",
+    icon: "Brain",
+    title: "Better Prompts. Less Effort",
     description:
-      "Bring Traceability to collaborative AI writing, making it easier for teams to manage their prompt asset.",
+      "Let Grimo generate & improve the prompts for you, or get production-level templates from the community.",
     iconColor: "hsla(135, 37%, 48%, 1)", // Added icon color
   },
   {
-    icon: "Search",
-    title: "Web Search anywhere",
+    icon: "Mic",
+    title: "Say it. Sometimes",
     description:
-      "Ensure that all generated content is grounded with reliable, up-to-date sources",
+      "Voice input that goes exactly like keyboard input, but LOUDER.",
     iconColor: "hsla(299, 72%, 72%, 1)", // Added icon color
   },
   {
-    icon: "BookText",
-    title: "Knowledge Base",
+    icon: "Handshake",
+    title: "Collaborate. Simple",
     description:
-      "Leverage your own data to enhance accuracy and consistency.",
+      "Real-time or Async collaboration in one place. Don’t send files again.",
     iconColor: "hsla(216, 71%, 51%, 1)", // Added icon color
-  },
-  {
-    icon: "Users",
-    title: "Real-time Collaboration",
-    description:
-      "Allow your whole team and AI to write, edit or comment in one doc.",
-    iconColor: "hsla(346, 75%, 53%, 1)", // Added icon color
   },
 ];
 

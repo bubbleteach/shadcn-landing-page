@@ -87,7 +87,7 @@ export const HeroSection = () => {
           </div>
 
           <p className="max-w-screen-sm text-lg lg:text-xl text-muted-foreground">
-            {`Your AI Content Pipeline in one place`}
+            {`Write better, faster`}
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
