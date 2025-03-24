@@ -230,37 +230,6 @@ html {
 }
 
 
-
-.glitch-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #fff;
-  color: #0f0;
-  font-family: monospace;
-  /* white-space: pre; */
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* padding: 2rem; */
-  z-index: 9999;
-  /* 高于其他元素 */
-  transition: opacity 0.8s ease;
-  pointer-events: none;
-  /* 不阻断鼠标事件 */
-}
-
-.glitch-overlay.visible {
-  opacity: 0.7;
-}
-
-.glitch-overlay.hidden {
-  opacity: 0;
-}
-
 /* 2) 背景反转(之前示例同样) */
 .invert-bg {
   filter: invert(100%) hue-rotate(180deg);
@@ -303,4 +272,8 @@ html {
   100% {
     transform: scaleX(1.000);
   }
+}
+
+.container {
+  max-width: 1152px;
 }

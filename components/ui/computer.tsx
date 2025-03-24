@@ -67,13 +67,13 @@ export const Computer = () => {
     };
 
     const generateRandomChars = () => {
-        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?/\\';
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?/';
         let result = '';
         
         // 创建多行随机字符
-        for (let i = 0; i < 125; i++) {
+        for (let i = 0; i < 180; i++) {
           let line = '';
-          for (let j = 0; j < 200; j++) {
+          for (let j = 0; j < 300; j++) {
             line += chars.charAt(Math.floor(Math.random() * chars.length));
           }
           result += line;
@@ -87,15 +87,18 @@ export const Computer = () => {
             <div className="w-fit">
 
                 {showGlitch && (
-                    <div className="glitch-overlay visible text-left">
-                    {glitchText}
+                    <div className=" break-all fixed opacity-70 top-0 left-0 w-screen h-screen bg-white text-green-500 font-mono overflow-hidden flex items-center justify-center z-[9999] transition-opacity duration-800 ease-in-out">
+                        {glitchText}
+
+                        {/* ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!! */}
+                        
                     </div>
                 )}
 
                 {/* <div className="distortion-overlay pointer-events-none" /> */}
 
 
-                <div className={` ${showGlitch?' hidden':'visible'} relative flex items-center justify-center cursor-pointer shadow-xl`} onClick={handleComputerClick}>
+                <div className={` ${showGlitch?' hidden':'visible'} relative flex items-center justify-center cursor-pointer shadow-xl  transform transition-transform duration-300 hover:scale-105`} onClick={handleComputerClick}>
                     {/* Computer Base */}
                     <div>
                         <Image
