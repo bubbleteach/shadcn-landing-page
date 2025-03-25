@@ -30,7 +30,7 @@ export const Computer = () => {
                 intervalRef.current = window.setInterval(() => {
                     updateCount++;
 
-                    if (updateCount = 10){
+                    if (updateCount = 14){
                         window.location.href = 'https://dev.grimo.ai/playground';
                     }
 
