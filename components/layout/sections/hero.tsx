@@ -90,8 +90,7 @@ export const HeroSection = () => {
             {`Write better, faster`}
           </p>
 
-          <div className="space-y-4 md:space-y-0 md:space-x-4">
-
+            <div className="flex  md:flex-row items-center justify-center flex-col-reverse gap-8 md:gap-4">
           {/* <Button
               asChild
               variant="outline"
@@ -104,6 +103,11 @@ export const HeroSection = () => {
                 Playground
               </Link>
             </Button> */}
+
+          {/* producthunt badge */}
+          <div className="">
+            <a href="https://www.producthunt.com/posts/grimo-b-eta?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-grimo&#0045;b&#0045;eta" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=945908&theme=light&t=1742975977640" alt="Grimo&#0032;&#0040;&#0058;b&#0041;eta - Cursor&#0032;for&#0032;Writing | Product Hunt" style={{width: "auto", height: "40px"}} className=" rounded-md" width="250" height="54" /></a>
+          </div>
 
             <Button asChild className=" w-40 font-bold group/arrow">
               <Link

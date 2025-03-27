@@ -102,11 +102,12 @@ export const Navbar = () => {
             transition-all duration-500 ease-in-out 
             px-4 md:px-16 py-2 md:py-0
             max-w-6xl
-            flex items-center justify-center
+            flex items-center
+            justify-between md:justify-center
           `}
         >
         {/* Nav */}
-        <div className="flex flex-1 items-center gap-2">
+        <div className="flex md:flex-1 items-center gap-4">
           <Link href="/" className="font-bold text-lg flex items-center gap-2">
             {/* <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" /> */}
             <Image
@@ -118,9 +119,12 @@ export const Navbar = () => {
               loading="eager"
             />
           </Link>
+
+          
+          
         </div>
 
-        {/* <!-- Mobile --> */}
+        {/* <!-- Mobile Nav --> */}
         <div className="flex items-center md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
