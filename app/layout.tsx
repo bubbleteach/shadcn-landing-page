@@ -68,7 +68,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <div className="min-h-screen py-14 md:py-16 flex-grow">{children}</div>
+          <div className="min-h-screen py-8 md:py-16 flex-grow">{children}</div>
           <FooterSection />
         </ThemeProvider>
         <CookieConsent />
