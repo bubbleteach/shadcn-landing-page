@@ -33,7 +33,7 @@ const plans: PlanProps[] = [
     price: 0,
     description: "For you my friend",
     buttonText: "Get Started",
-    buttonLink: "http://go.grimo.ai",
+    buttonLink: "https://heyform.net/f/yaX33mIs",
     benefitList: [
       "Write / Edit with AI",
       "All LLMs from OpenAI, Anthropic, DeepSeek, etc.",
@@ -47,7 +47,7 @@ const plans: PlanProps[] = [
     price: 20,
     description: "For 10x professionals",
     buttonText: "Start Free Trial",
-    buttonLink: "http://go.grimo.ai",
+    buttonLink: "https://heyform.net/f/yaX33mIs",
     benefitList: [
       "Everything in Starter Plan",
       "Unlimited Docs",
@@ -58,10 +58,10 @@ const plans: PlanProps[] = [
   {
     title: "Team",
     popular: 0,
-    price: -1,
+    price: 40,
     description: "For frictionless collaboration",
-    buttonText: "Contact US",
-    buttonLink: "mailto:dev@grimo.ai",
+    buttonText: "Coming soon",
+    buttonLink: "",
     benefitList: [
       "Everything in Pro Plan",
       "Organization Workspace",
@@ -137,7 +137,13 @@ export const PricingSection = () => {
                     {price > 0 && <span className="text-muted-foreground"> /month</span>}
                   </div>
                   
-                  <Button
+                 {buttonLink === "" ?<Button
+                    variant="outline"
+                    disabled={true}
+                    className="w-full mt-6"
+                  >
+                      {buttonText}
+                </Button>: <Button
                     asChild
                     variant={
                       popular === PopularPlan?.YES ? "default" : "outline"
@@ -147,7 +153,7 @@ export const PricingSection = () => {
                     <Link target="_blank" href={buttonLink}>
                       {buttonText}
                     </Link>
-                </Button>
+                </Button>}
                 </div>
               </CardHeader>
 
