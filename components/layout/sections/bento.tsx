@@ -123,7 +123,7 @@ export const BentoSection = () => {
                     alt="speechToText"
                     style={{ maxWidth: "100%",height:"28px" }}
                   /></span></>}
-                  description={<>Real-time or Async collaboration in one place. <span className=" py-[2px] px-1 bg-brand/20 rounded-sm">Don't send files again.</span><span className=" absolute ml-1"><Image
+                  description={<>Real-time or Async collaboration in one place. <span className=" py-[2px] px-1 bg-brand/20 rounded-sm">Don&apos;t send files again.</span><span className=" absolute ml-1"><Image
                     width={0}
                     height={0}
                     className="h-auto w-full"
