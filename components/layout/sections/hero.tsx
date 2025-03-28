@@ -131,7 +131,7 @@ export const HeroSection = () => {
               <Image
                 width={1024}
                 height={0}
-                className="w-[1024px] shadow-xl mx-auto rounded-lg rouded-lg leading-none items-center border-secondary border-t-primary/30"
+                className="w-[1024px] border border-border shadow-xl mx-auto rounded-lg rouded-lg leading-none items-center"
                 style={{
                   transform: `scale(${scale / 100})`,
                   transition: 'transform 0.3s ease-out'
