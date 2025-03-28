@@ -87,7 +87,7 @@ export const HeroSection = () => {
           </div>
 
           <p className="max-w-screen-sm text-lg lg:text-xl text-muted-foreground">
-            {`Write better, faster`}
+            {`Welcome to the Thinking Editor`}
           </p>
 
             <div className="flex  md:flex-row items-center justify-center flex-col-reverse gap-8 md:gap-4">

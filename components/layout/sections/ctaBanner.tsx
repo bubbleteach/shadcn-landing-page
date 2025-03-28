@@ -24,7 +24,7 @@ export const CtaBanner = () => {
             </div>
 
             <div>
-                <h2 className=" text-primary-foreground text-center text-4xl font-semibold">Think of a cool new way to use a word processor</h2>
+                <h2 className=" text-primary-foreground text-center text-4xl font-semibold">When words take flight, ears shall follow.</h2>
             </div>
             <div className="space-y-4 md:space-y-0 md:space-x-4 z-10">
 

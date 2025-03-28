@@ -50,10 +50,10 @@ const featureList: FeaturesProps[] = [
 export const FeaturesSection = () => {
   return (
     <section id="features" className="container w-full my-32">
-      <div className = "flex gap-2 flex-col items-start">
+      <div className = "flex gap-3 flex-col items-start">
         <Badge variant="brand" className="">Features</Badge>
 
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+        <h2 className="text-2xl md:text-3xl font-semibold">
           {`What Makes Us `}
           <span 
             className="relative"
