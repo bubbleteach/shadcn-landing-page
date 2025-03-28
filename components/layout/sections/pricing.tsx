@@ -28,44 +28,45 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Writer",
+    title: "Starter",
     popular: 0,
-    price: 20,
-    description: "For power writers and editors",
+    price: 0,
+    description: "For you my friend",
     buttonText: "Get Started",
     buttonLink: "http://go.grimo.ai",
     benefitList: [
-      "Write/Edit/Comment with AI",
-      "Unlimited AI Usage (Claude 3.5 Sonnet)",
-      "Unlimited storage",
+      "Write / Edit with AI",
+      "All LLMs from OpenAI, Anthropic, DeepSeek, etc.",
+      "Prompt Management",
+      "1 Doc"
     ],
   },
   {
-    title: "Editor",
+    title: "Pro",
     popular: 1,
-    price: 40,
-    description: "For teams collaborating on content",
+    price: 20,
+    description: "For 10x professionals",
     buttonText: "Start Free Trial",
     buttonLink: "http://go.grimo.ai",
     benefitList: [
-      "Everything in Pro plus",
-      "Real-time Collaboration",
-      "Initial Deployment Support",
-      "Access Control - Editor (Coming Soon...)",
+      "Everything in Starter Plan",
+      "Unlimited Docs",
+      "Community Templates",
+      "[Early Access] MCP Servers",
     ],
   },
   {
-    title: "Enterprise",
+    title: "Team",
     popular: 0,
     price: -1,
-    description: "For teams with",
+    description: "For frictionless collaboration",
     buttonText: "Contact US",
     buttonLink: "mailto:dev@grimo.ai",
     benefitList: [
-      "Everything in Team plus",
-      "Weekly Deployment Support",
-      "Advanced Security & Analytics (Coming Soon...)",
-      "Access Control - Memory (Coming Soon...)",
+      "Everything in Pro Plan",
+      "Organization Workspace",
+      "Access Control",
+      "Advanced Security",
       // "Dedicated Support",
     ],
   },
@@ -75,18 +76,20 @@ export const PricingSection = () => {
   return (
     <section id="pricing" className="container ">
       <div className="">
-      {/* <h2 className="text-lg text-primary mb-2 tracking-wider">
-        Pricing
-      </h2> */}
 
-      <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-        Simple Pricing, No Add-ons
-      </h2>
+        <div className="flex gap-3 flex-col items-start">
+            {/* <h2 className="text-lg text-primary mb-2 tracking-wider">
+              Pricing
+            </h2> */}
 
-      <h3 className="mx-auto text-xl text-muted-foreground pb-14">
-        Cancel Anytime
-      </h3>
+            <h2 className="text-2xl md:text-3xl font-semibold ">
+              Simple Pricing, No Add-ons
+            </h2>
 
+            <h3 className=" text-base text-muted-foreground pb-14">
+              Cancel Anytime
+            </h3>
+      </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {plans.map(
           ({
@@ -108,11 +111,8 @@ export const PricingSection = () => {
               // }
             >
 
-
-              <CardHeader>
-
-              {popular===PopularPlan?.YES && 
-                  <div className="relative">
+                {popular===PopularPlan?.YES && 
+                  <div className="relative top-8 md:top-4 left-2">
                     <Badge 
                       variant="paper" 
                       className="w-fit absolute top-[-2rem] right-0 text-xl shadow" 
@@ -122,6 +122,7 @@ export const PricingSection = () => {
                     </Badge>
                   </div>
                 }
+              <CardHeader className="">
 
                 <CardTitle className="pb-2">{title}</CardTitle>
 
@@ -132,8 +133,8 @@ export const PricingSection = () => {
                 <div>
                   
                   <div>
-                    <span className="text-3xl font-bold">{price > -1?'$'+price:'--'}</span>
-                    <span className="text-muted-foreground"> /month</span>
+                    <span className="text-3xl font-bold">{price === 0 ? 'Free' : price === -1 ? '--' : `$${price}`}</span>
+                    {price > 0 && <span className="text-muted-foreground"> /month</span>}
                   </div>
                   
                   <Button
@@ -150,11 +151,11 @@ export const PricingSection = () => {
                 </div>
               </CardHeader>
 
-              <CardContent className="flex">
+              <CardContent className="flex py-4">
                 <div className="space-y-4">
                   {benefitList.map((benefit) => (
                     <span key={benefit} className="flex">
-                      <Check className="text-primary mr-2" />
+                      <Check className="text-primary mr-2 min-w-6" />
                       <h3>{benefit}</h3>
                     </span>
                   ))}
