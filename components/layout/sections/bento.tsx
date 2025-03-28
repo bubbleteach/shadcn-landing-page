@@ -68,17 +68,17 @@ export const BentoSection = () => {
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
 
           {/* 1 */}
-          <div className=" flex gap-4 items-start h-[856px]">
+          <div className=" flex gap-4 items-start h-[846px]">
             <div className = "flex flex-col gap-4 h-full w-full">
               
               {/* Edit with AI */}  
                 <BentoCard
-                  className=" h-[290px]"
+                  className=" pb-4 md:pb-6 "
                   icon="PencilLine"
                   title="Edit with AI. Anywhere"
                   description="The Strongest AI Text Editor, powered by latest AI models including DeepSeek R1, Claude 3.7 Sonnet, OpenAI GPT4, o3-mini, etc."
                   image={
-                    <div className=" absolute w-full flex justify-end flex-col bottom-6 left-[2.4rem] scale-125">
+                    <div className=" translate-x-10 mt-2 md:mt-1 w-full flex justify-end flex-col bottom-6 left-[2.4rem] scale-125 min-w-[30rem] max-w-[40rem]">
                       <Image
                         width={0}
                         height={200}
