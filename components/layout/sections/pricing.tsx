@@ -33,7 +33,7 @@ const plans: PlanProps[] = [
     price: 0,
     description: "For you my friend",
     buttonText: "Get Started",
-    buttonLink: "https://heyform.net/f/yaX33mIs",
+    buttonLink: "http://beta.grimo.ai",
     benefitList: [
       "Write / Edit with AI",
       "All LLMs from OpenAI, Anthropic, DeepSeek, etc.",
@@ -47,7 +47,7 @@ const plans: PlanProps[] = [
     price: 20,
     description: "For 10x professionals",
     buttonText: "Start Free Trial",
-    buttonLink: "https://heyform.net/f/yaX33mIs",
+    buttonLink: "http://beta.grimo.ai",
     benefitList: [
       "Everything in Starter Plan",
       "Unlimited Docs",

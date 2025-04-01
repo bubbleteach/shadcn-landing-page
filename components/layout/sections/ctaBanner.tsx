@@ -44,7 +44,7 @@ export const CtaBanner = () => {
                 <Button asChild variant="outline" className=" w-40 font-bold group/arrow">
                     <Link
                     aria-label="Build Your Words"
-                    href="http://app.grimo.ai"
+                    href="http://beta.grimo.ai"
                     target="_blank"
                     >
                     Build Your Words
