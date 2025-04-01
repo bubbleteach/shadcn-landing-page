@@ -109,7 +109,7 @@ export const HeroSection = () => {
             <a href="https://www.producthunt.com/posts/grimo-b-eta?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-grimo&#0045;b&#0045;eta" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=945908&theme=light&t=1742975977640" alt="Grimo&#0032;&#0040;&#0058;b&#0041;eta - Cursor&#0032;for&#0032;Writing | Product Hunt" style={{width: "auto", height: "40px"}} className=" rounded-md" width="250" height="54" /></a>
           </div>
 
-            <Button asChild className=" w-40 font-bold group/arrow">
+            <Button asChild className=" w-40 font-bold group/arrow rounded-[0.4rem]">
               <Link
                 aria-label="Build Your Words"
                 href="http://beta.grimo.ai"
