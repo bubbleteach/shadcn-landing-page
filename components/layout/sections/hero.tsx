@@ -70,7 +70,7 @@ export const HeroSection = () => {
               {/* <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
                 Reimagine
               </span> */}
-              {`Cursor for `}
+              {`Let's Vibe `}
               <span 
                 className="relative"
                 style={{
@@ -112,7 +112,7 @@ export const HeroSection = () => {
             <Button asChild className=" w-40 font-bold group/arrow">
               <Link
                 aria-label="Build Your Words"
-                href="http://app.grimo.ai"
+                href="http://beta.grimo.ai"
                 target="_blank"
               >
                 Build Your Words
