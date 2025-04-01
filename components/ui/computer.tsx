@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-// import Lottie from 'lottie-react';
+import Link from 'next/link';
 import Image from "next/image";
 
 export const Computer = () => {
@@ -129,7 +129,11 @@ export const Computer = () => {
                                 priority
                             /> */}
 
+                            <link rel="preload" href="video.mp4" as="video" type="video/mp4" />
+
+
                             {isPowerOn&&<video 
+                                preload='auto'
                                 className="w-full h-full object-contain"
                                 autoPlay 
                                 muted 
@@ -137,7 +141,7 @@ export const Computer = () => {
                             >
                                 <source src="/computer/grimo.mp4" type="video/mp4" />
                             </video>
-}
+                            }
                         </div>
                     </div>
                 </div>      
