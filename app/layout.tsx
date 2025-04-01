@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 import { CookieConsent } from "@/components/cookie-consent/cookie-consent";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script'
-import Image from "next/image";
+// import Image from "next/image";
 
 // export const metadata: Metadata = {
 //   title: "Grimo - Reimagine Word Processor",
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://grimo.ai"),
   title: {
     template: "%s | Grimo",
-    default: "Grimo - Reimagine Word Processor",
+    default: "Grimo - Cursor for Writing",
   },
-  description: "Your All-in-one Writing Interface for Better Writing",
+  description: "The most powerful AI text editor. Coherent editing. Customized styling. Collaborate seamlessly.",
 };
 
 /**
