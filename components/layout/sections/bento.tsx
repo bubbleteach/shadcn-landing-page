@@ -39,7 +39,7 @@ const BentoCard = ({ icon, title, description, image, className }: BentoCardProp
 
 export const BentoSection = () => {
   return (
-    <section id="bento" className="container w-full my-32">
+    <section id="features" className="container scroll-mt-20 w-full my-32">
       <div className = "flex gap-3 flex-col items-start">
         <Badge variant="brand" className="">Features</Badge>
 

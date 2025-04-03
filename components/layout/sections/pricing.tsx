@@ -74,7 +74,7 @@ const plans: PlanProps[] = [
 
 export const PricingSection = () => {
   return (
-    <section id="pricing" className="container ">
+    <section id="pricing" className="container scroll-mt-20">
       <div className="">
 
         <div className="flex gap-3 flex-col items-start">

@@ -1,7 +1,7 @@
 import { BenefitsSection } from "@/components/layout/sections/benefits";
 // import { CommunitySection } from "@/components/layout/sections/community";
 // import { ContactSection } from "@/components/layout/sections/contact";
-// import { FAQSection } from "@/components/layout/sections/faq";
+import { FAQSection } from "@/components/layout/sections/faq";
 import { FeaturesSection } from "@/components/layout/sections/features";
 
 import { HeroSection } from "@/components/layout/sections/hero";
@@ -34,9 +34,10 @@ export default function Home() {
       {/* <TeamSection /> */}
       {/* <CommunitySection /> */}
       <PricingSection />
-      <CtaBanner/>
+      
       {/* <ContactSection /> */}
-      {/* <FAQSection /> */}
+      <FAQSection />
+      <CtaBanner/>
     </>
   );
 }
