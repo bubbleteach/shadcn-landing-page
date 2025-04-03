@@ -6,7 +6,7 @@ import Link from "next/link";
 export const CtaBanner = () => {
     return (
 
-    <section id="ctaBanner" className="container w-full mt-16 md:mt-32 mb-8 md:mb-16 ">
+    <section id="ctaBanner" className="container scroll-mt-20 w-full mt-16 md:mt-32 mb-8 md:mb-16 ">
 
         <div className=" flex flex-col gap-10 items-center bg-primary py-8 md:py-20 rounded overflow-hidden shadow-lg">
             

@@ -55,10 +55,10 @@ const routeList: RouteProps[] = [
   //   href: "/playground",
   //   label: "Playground",
   // },
-  // {
-  //   href: "/#faq",
-  //   label: "FAQ",
-  // },
+  {
+    href: "/#faq",
+    label: "FAQ",
+  },
 ];
 
 const featureList: FeatureProps[] = [
