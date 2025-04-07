@@ -186,7 +186,7 @@ export const Navbar = () => {
         </Button> */}
 
           {/* <Button asChild variant="ghost" className="w-fit" size="sm">
-          <Link aria-label="grimo" href="http://go.grimo.ai" target="_blank">
+          <Link aria-label="grimo" href="https://go.grimo.ai" target="_blank">
             About
           </Link>
         </Button> */}
@@ -207,7 +207,7 @@ export const Navbar = () => {
           </NavigationMenu>
 
           <Button asChild variant="outline" className="w-fit" size="sm">
-            <Link aria-label="grimo" href="http://beta.grimo.ai" target="_blank">
+            <Link aria-label="grimo" href="https://beta.grimo.ai" target="_blank">
               Start Writing
             </Link>
           </Button>
