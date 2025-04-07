@@ -113,7 +113,7 @@ export const HeroSection = () => {
             <Button asChild className=" w-40 font-bold group/arrow rounded-[0.4rem]">
               <Link
                 aria-label="Build Your Words"
-                href="http://beta.grimo.ai"
+                href="https://beta.grimo.ai"
                 target="_blank"
               >
                 Build Your Words
