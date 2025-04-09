@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export const FooterSection = () => {
   return (
-    <footer id="footer" className=" py-24 sm:py-7 border-t border-sidebar-border bg-sidebar-accent">
+    <footer id="footer" className=" py-24 sm:py-7 border-t border-sidebar-border bg-accent">
       {/* <Separator className="my-9" /> */}
       <div className=" container pt-10">
         <div className=" flex flex-col md:flex-row">
@@ -121,6 +121,18 @@ export const FooterSection = () => {
                   className="opacity-60 hover:opacity-100"
                 >
                   Refund Policy
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <h3 className="font-medium text-lg">Product</h3>
+              <div>
+                <Link
+                  href="/releases"
+                  className="opacity-60 hover:opacity-100"
+                >
+                  Releases
                 </Link>
               </div>
             </div>
