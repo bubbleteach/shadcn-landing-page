@@ -126,7 +126,7 @@ export const FooterSection = () => {
             </div>
 
             <div className="flex flex-col gap-4">
-              <h3 className="font-medium text-lg">Product</h3>
+              <h3 className="font-medium text-lg">Docs</h3>
               <div>
                 <Link
                   href="/releases"
