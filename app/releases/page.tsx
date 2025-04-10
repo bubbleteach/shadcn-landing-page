@@ -16,14 +16,10 @@ export default function Releases() {
 
     return (
         <main className='container px-4 md:px-16  mt-2 md:mt-14 w-full max-w-2xl text-foreground'>
-            <div className=" md:pl-[294px] space-y-6 pb-16 border-b border-border">
+            <div className=" space-y-6 pb-16">
                 <h1 className=" text-4xl font-semibold">Releases</h1>
-                <p className=" text-lg">Follow Grimo updates and improvements.</p>
+                {/* <p className=" text-lg">Follow Grimo updates and improvements.</p>
                 <div className=" flex flex-row gap-4">
-                    {/* <Button className=" text-brand px-0" variant="link">YouTube</Button> 
-                    <Button className=" text-brand px-0" variant="link">Twitter</Button>
-                    <Button className=" text-brand px-0" variant="link">YouTube</Button> */}
-
                 <Link
                   href="https://www.linkedin.com/company/grimo-ai/"
                   className=" text-brand hover:opacity-90 flex flex-row gap-1"
@@ -36,7 +32,7 @@ export default function Releases() {
                 >
                   X/Twitter
                 </Link>
-                </div>
+                </div> */}
             </div>
             
             {/* list */}
