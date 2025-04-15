@@ -89,6 +89,26 @@ export const FooterSection = () => {
             </div>
 
             <div className="flex flex-col gap-4">
+              <h3 className="font-medium text-lg">Docs</h3>
+              <div>
+                <Link
+                  href="/releases"
+                  className="opacity-60 hover:opacity-100"
+                >
+                  Releases
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="/blog"
+                  className="opacity-60 hover:opacity-100"
+                >
+                  Blog
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-4">
               <h3 className="font-medium text-lg">Terms & Policies</h3>
               <div>
                 <Link
@@ -121,18 +141,6 @@ export const FooterSection = () => {
                   className="opacity-60 hover:opacity-100"
                 >
                   Refund Policy
-                </Link>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-4">
-              <h3 className="font-medium text-lg">Docs</h3>
-              <div>
-                <Link
-                  href="/releases"
-                  className="opacity-60 hover:opacity-100"
-                >
-                  Releases
                 </Link>
               </div>
             </div>

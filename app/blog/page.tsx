@@ -33,27 +33,26 @@ export default function Blog() {
                         {/* content */}
                         <div className="flex flex-col gap-3 w-fit">
                             <div className=" flex flex-col gap-4">
-                                {post.tag.length > 0 && <div className="flex flex-row gap-2 items-center">
-                                    {Array.isArray(post.tag) 
-                                        ? post.tag.map((tag) => (
-                                            <Badge variant="outline" key={tag} className=" w-fit h-5 ">{tag}</Badge>
-                                        ))
-                                        : typeof post.tag === 'string'
-                                            ? post.tag.split(',').map((tag) => (
-                                                <Badge variant="outline" key={tag}  className=" w-fit h-5">{tag}</Badge>
-                                            ))
-                                            : null
-                                    }
-                                </div>}
                                 <Link href={`/blog/${post.slug}`} className="text-brand">
                                     <h2 className=" text-xl font-semibold text-foreground hover:text-brand">{post.title}</h2>
                                 </Link>
-
                             </div>
                             <div className=" text-base line-clamp-3">
                                 {post.excerpt}
                             </div>
-                            <div>
+                            {post.tag.length > 0 && <div className="flex flex-row gap-2 items-center">
+                                    {Array.isArray(post.tag) 
+                                        ? post.tag.map((tag) => (
+                                            <Badge variant="outline" badgeColor="black" key={tag} className=" w-fit ">{tag}</Badge>
+                                        ))
+                                        : typeof post.tag === 'string'
+                                            ? post.tag.split(',').map((tag) => (
+                                                <Badge variant="outline" badgeColor="black" key={tag}  className=" w-fit">{tag}</Badge>
+                                            ))
+                                            : null
+                                    }
+                                </div>}  
+                        <div>
                             {/* <Link href={`/blog/${post.slug}`} className="text-brand hidden md:block">Read More</Link> */}
 
                         </div>

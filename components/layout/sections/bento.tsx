@@ -75,7 +75,7 @@ export const BentoSection = () => {
                 <BentoCard
                   className=" pb-4 md:pb-6 "
                   icon="PencilLine"
-                  title="Edit with AI. Anywhere"
+                  title="Edit with AI. Anywhere."
                   description="The Strongest AI Text Editor, powered by latest AI models including DeepSeek R1, Claude 3.7 Sonnet, OpenAI GPT4, o3-mini, etc."
                   image={
                     <div className=" translate-x-10 mt-2 md:mt-1 w-full flex justify-end flex-col bottom-6 left-[2.4rem] scale-125 min-w-[30rem] max-w-[40rem]">
