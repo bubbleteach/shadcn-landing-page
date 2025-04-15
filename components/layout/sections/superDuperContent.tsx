@@ -67,7 +67,7 @@ export const SuperDuperContent = () => {
 
           <div className="flex flex-col my-8 md:my-16 gap-5">
               <div className="flex flex-col text-center md:text-left shadow-none items-start gap-2 bg-none! border-none">
-            <Badge variant="brand" className="w-fit" style={{ backgroundColor: "#EAE6FF", color: "#5E4DB2" }}>Hello</Badge>
+            <Badge className="w-fit" style={{ backgroundColor: "#EAE6FF", color: "#5E4DB2" }}>Hello</Badge>
             <h2 className="text-2xl md:text-3xl font-semibold">1 Build Brand Trust</h2>
             <p className="text-muted-foreground px-0 text-left">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.
@@ -86,7 +86,7 @@ export const SuperDuperContent = () => {
 
           <div className="flex flex-col my-8 md:my-16 gap-5">
               <div className="flex flex-col text-center md:text-left shadow-none items-start gap-2 bg-none! border-none">
-            <Badge variant="brand" className="w-fit" style={{ backgroundColor: "#E8F2D9", color: "#68A111" }}>Hello</Badge>
+            <Badge className="w-fit" style={{ backgroundColor: "#E8F2D9", color: "#68A111" }}>Hello</Badge>
             <h2 className="text-2xl md:text-3xl font-semibold">2 More Leads</h2>
             <p className="text-muted-foreground px-0 text-left">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.

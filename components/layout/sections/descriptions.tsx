@@ -108,7 +108,7 @@ export const Descriptions = () => {
                   }`}
                 >
                   <Card className="flex flex-col text-center md:text-left shadow-none items-center md:items-start gap-2 bg-none! border-none">
-                    {tag && <Badge variant={"brand"} className="w-fit">{tag}</Badge>}
+                    {tag && <Badge className="w-fit">{tag}</Badge>}
                     <CardTitle className="">{title}</CardTitle>
                     <CardContent className="text-muted-foreground px-0">
                       {description}
