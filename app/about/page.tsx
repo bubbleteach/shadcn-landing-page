@@ -5,7 +5,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <main className="container prose lg:prose-xl mx-auto w-full">
+      <main className="container prose  mx-auto w-full">
         <div>
           <h1>About</h1>
           <p>

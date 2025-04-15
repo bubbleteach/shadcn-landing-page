@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicy() {
   return (
     <>
-      <main className="container prose lg:prose-xl mx-auto w-full">
+      <main className="container prose mx-auto w-full">
         <div>
           <h1>Privacy Policy</h1>
           <p>

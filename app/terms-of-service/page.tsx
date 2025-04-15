@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 export default function TermsOfService() {
   return (
     <>
-      <main className="container prose lg:prose-xl w-full">
+      <main className="container prose w-full">
         <div>
           <h1>Terms of Service</h1>
           <p>

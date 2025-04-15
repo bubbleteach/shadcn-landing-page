@@ -17,7 +17,7 @@ export default function ReleaseContent({ content }: { content: string }) {
       return <div>Loading...</div>;
     }
   
-    return <div className="prose">
+    return <div className="prose !p-0">
         <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
     </div>
   }

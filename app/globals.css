@@ -277,3 +277,8 @@ html {
 .container {
   max-width: 1152px;
 }
+
+.prose {
+  padding: 0 224px;
+  padding-top: 56px;
+}
