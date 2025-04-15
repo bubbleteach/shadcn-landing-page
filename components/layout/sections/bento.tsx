@@ -41,7 +41,7 @@ export const BentoSection = () => {
   return (
     <section id="features" className="container scroll-mt-20 w-full my-32">
       <div className = "flex gap-3 flex-col items-start">
-        <Badge variant="brand" className="">Features</Badge>
+        <Badge variant="outline" badgeColor="brand" className="">Features</Badge>
 
         <h2 className="text-2xl md:text-3xl font-semibold">
           {`What Makes Us `}

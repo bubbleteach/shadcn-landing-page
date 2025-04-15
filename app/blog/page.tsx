@@ -36,11 +36,11 @@ export default function Blog() {
                                 {post.tag.length > 0 && <div className="flex flex-row gap-2 items-center">
                                     {Array.isArray(post.tag) 
                                         ? post.tag.map((tag) => (
-                                            <Badge variant="outline" key={tag} className=" border-foreground w-fit h-5">{tag}</Badge>
+                                            <Badge variant="outline" key={tag} className=" w-fit h-5 ">{tag}</Badge>
                                         ))
                                         : typeof post.tag === 'string'
                                             ? post.tag.split(',').map((tag) => (
-                                                <Badge variant="outline" key={tag} className="border-foreground w-fit h-5">{tag}</Badge>
+                                                <Badge variant="outline" key={tag}  className=" w-fit h-5">{tag}</Badge>
                                             ))
                                             : null
                                     }

@@ -65,7 +65,7 @@ export const OutputExample = () => {
           className=" container  flex flex-col my-16 gap-4"
       >
           <div className="flex flex-col text-left shadow-none items-start gap-2 bg-none! border-none">
-          <Badge variant="brand" className="w-fit " style={{ backgroundColor: "#F8E5D8", color: "#FA9248" }}>articles</Badge>
+          <Badge variant="outline" badgeColor="green" className="w-fit ">articles</Badge>
           <h2 className=" text-2xl md:text-3xl font-semibold">Write what you want</h2>
           <p className="text-muted-foreground px-0">
               Express your ideas freely without limitations

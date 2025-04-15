@@ -2,7 +2,7 @@
 title: "🚀 Building Better Web Applications with Modern Architecture"
 tag: "development"
 excerpt: "Explore the evolution of web application architecture and learn how modern approaches like microservices, serverless computing, and edge computing are reshaping how we build scalable, performant applications. Discover practical insights from real-world implementations and understand the trade-offs involved in different architectural decisions."
-date: "2025.5.20"
+date: "May 20, 2025"
 author: "grimo"
 ---
 
