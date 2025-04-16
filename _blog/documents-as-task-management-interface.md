@@ -1,6 +1,6 @@
 ---
 title: "📝 The Hidden Power of Documents in Task Management"
-tag: "productivity, task-management"
+tag: "Productivity, Task-management"
 excerpt: "Discover how documents can be reimagined as powerful task management interfaces. Learn about the three key advantages - flexibility in capture, natural context preservation, and seamless integration - that make documents more than just note-taking tools. See how Bento combines the best of Raycast and Logseq to create a workflow that adapts to you, not the other way around."
 date: "April 14, 2025"
 author: "grimo"

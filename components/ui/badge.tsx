@@ -19,7 +19,7 @@ const badgeVariants = cva(
       },
       badgeColor: {
         brand: "bg-none text-brand border border-brand",
-        black:"bg-none text-foreground border border-sidebar-border",
+        black:"bg-none text-foreground border border-ring",
         green: "bg-none text-green-700 border border-green-700",
         blue: "bg-none text-blue-700 border border-blue-700",
         yellow: "bg-none text-yellow-700 border border-yellow-700",

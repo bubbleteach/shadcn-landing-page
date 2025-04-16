@@ -31,7 +31,7 @@ export default function Blog() {
                             <div className=" text-sm text-muted-foreground md:text-foreground">{post.author}</div>
                         </div>
                         {/* content */}
-                        <div className="flex flex-col gap-3 w-fit">
+                        <div className="flex flex-col gap-4 w-fit">
                             <div className=" flex flex-col gap-4">
                                 <Link href={`/blog/${post.slug}`} className="text-brand">
                                     <h2 className=" text-xl font-semibold text-foreground hover:text-brand">{post.title}</h2>

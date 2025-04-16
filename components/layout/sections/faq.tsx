@@ -14,31 +14,31 @@ interface FAQProps {
 const FAQList: FAQProps[] = [
   {
     question:
-      "How is Grimo different from other AI writing tools?",
-    answer: "Unlike other AI writing tools that generate content for you, Grimo collaborates with you in the writing process. It enhances your writing abilities rather than replacing them, allowing you to express your ideas freely without limitations.",
+      "What can I use Grimo for?",
+    answer: "You can use Grimo for literally any writing task - blogs, tweets, DMs, comments, professional documents, your creativity is the limit. After all, Grimo is for expression.",
     value: "item-5",
   },
   {
-    question: "What can I use Grimo for?",
-    answer: "You can use Grimo for any writing task - articles, essays, creative writing, professional documents, and more. The platform is designed to accommodate various writing needs while providing AI assistance.",
+    question: "How is Grimo different?",
+    answer: "Unlike other AI writing tools that 'generate' content for you, Grimo collaborates with you in the writing process. It enhances your writing abilities rather than replacing them, allowing you to express your ideas freely without limitations.",
     value: "item-1",
   },
   {
-    question: "Which AI models does Grimo use?",
+    question: "Which AI models can I use in Grimo?",
     answer:
-      "Grimo utilizes several advanced AI models including DeepSeek R1, Claude 3.7 Sonnet, OpenAI GPT4, o3-mini, and others to provide powerful editing capabilities.",
+      "Grimo utilizes all latest AI models including GPT 4.1, DeepSeek R1, Gemini 2.5 Pro, Claude 3.7 Sonnet, and many others to provide powerful editing capabilities. Trust me, the Model Listing will be updated hours within any top-tier model launch.",
     value: "item-2",
   },
   {
     question:
-      "What research capabilities does Grimo offer?",
+      "Are the results reliable?",
     answer:
-      "Grimo integrates web search, file access, and Reddit information directly into the editor. This feature, called MCP (Multi-Context Processing), allows you to access credible sources and write with confidence.",
+      "Grimo integrates web search, knowledge base, and even real-time Reddit information directly into the editor. These allow you to access credible sources and write with confidence.",
     value: "item-3",
   },
   {
-    question: "How does Grimo handle prompts?",
-    answer: "Grimo can generate and improve prompts for you. It also provides access to production-level templates from the community, making it easier to get started with effective prompts.",
+    question: "Prompting is hard, what can I do?",
+    answer: "Don't worry, Grimo can generate and improve prompts for you. It also provides access to production-level templates from the community, making it easier to cater to different use cases.",
     value: "item-4",
   },
 
