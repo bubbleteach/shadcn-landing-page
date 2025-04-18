@@ -10,7 +10,7 @@ export const FooterSection = () => {
   return (
     <footer id="footer" className=" py-24 sm:py-7 border-t border-sidebar-border bg-accent">
       {/* <Separator className="my-9" /> */}
-      <div className=" container pt-10">
+      <div className=" container py-10">
         <div className=" flex flex-col md:flex-row">
           <div className="flex-1 flex flex-col gap-6 pt-1 pb-8">
             <Image

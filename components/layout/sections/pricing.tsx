@@ -1,4 +1,7 @@
+'use client'
 import { Button } from "@/components/ui/button";
+
+import { useState } from 'react';
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -10,6 +13,9 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import { Check } from "lucide-react";
+import Odometer from 'react-odometerjs';
+import 'odometer/themes/odometer-theme-default.css';
+
 
 enum PopularPlan {
   NO = 0,
@@ -19,7 +25,8 @@ enum PopularPlan {
 interface PlanProps {
   title: string;
   popular: PopularPlan;
-  price: number;
+  monthlyPrice: number;
+  yearlyPrice: number;
   description: string;
   buttonText: string;
   buttonLink: string;
@@ -30,7 +37,8 @@ const plans: PlanProps[] = [
   {
     title: "Starter",
     popular: 0,
-    price: 0,
+    monthlyPrice: 0,
+    yearlyPrice: 0,
     description: "For you my friend",
     buttonText: "Get Started",
     buttonLink: "https://beta.grimo.ai",
@@ -44,7 +52,8 @@ const plans: PlanProps[] = [
   {
     title: "Pro",
     popular: 1,
-    price: 20,
+    monthlyPrice: 20,
+    yearlyPrice: 16,
     description: "For 10x professionals",
     buttonText: "Start Free Trial",
     buttonLink: "https://beta.grimo.ai",
@@ -58,10 +67,11 @@ const plans: PlanProps[] = [
   {
     title: "Team",
     popular: 0,
-    price: 40,
+    monthlyPrice: 40,
+    yearlyPrice: 32,
     description: "For frictionless collaboration",
-    buttonText: "Coming soon",
-    buttonLink: "",
+    buttonText: "Contact US",
+    buttonLink: "https://beta.grimo.ai",
     benefitList: [
       "Everything in Pro Plan",
       "Organization Workspace",
@@ -73,29 +83,64 @@ const plans: PlanProps[] = [
 ];
 
 export const PricingSection = () => {
+
+
+  const [isYearly, setIsYearly] = useState(true);
+
   return (
     <section id="pricing" className="container scroll-mt-20">
       <div className="">
 
-        <div className="flex gap-3 flex-col items-start">
+        <div className="flex flex-col md:flex-row gap-8 pb-8 md:pb-14 md:items-center">
             {/* <h2 className="text-lg text-primary mb-2 tracking-wider">
               Pricing
             </h2> */}
+            <div className="flex gap-3 flex-col items-start flex-1">
+              <h2 className="text-2xl md:text-3xl font-semibold ">
+                Simple Pricing, No Add-ons
+              </h2>
 
-            <h2 className="text-2xl md:text-3xl font-semibold ">
-              Simple Pricing, No Add-ons
-            </h2>
+              <h3 className=" text-base text-muted-foreground">
+                Cancel Anytime
+              </h3>
+            </div>
 
-            <h3 className=" text-base text-muted-foreground pb-14">
-              Cancel Anytime
-            </h3>
-      </div>
+            {/* Toggle */}
+            <div className="flex items-center p-1 gap-2 h-fit w-fit bg-background border border-sidebar-border rounded">
+              <Button
+                variant="ghost"
+                size={"sm"}
+                className={`h-6  ${isYearly ? '' : 'bg-accent'}`}
+                onClick={() => setIsYearly(false)}
+              >
+                Monthly
+              </Button>
+              <Button
+                variant="ghost"
+                size={"sm"}
+                className={`h-6 flex gap-1 ${isYearly ? 'bg-accent' : ''}`}
+                onClick={() => setIsYearly(true)}
+              >
+                Yearly 
+                <span
+                  className={` text-xs font-normal ${isYearly? 'text-brand' : 'text-muted-foreground'} `}
+                  >
+                  Save 20%
+                </span>
+              </Button>
+            </div>
+            
+        </div>
+
+
+        
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {plans.map(
           ({
             title,
             popular,
-            price,
+            monthlyPrice,
+            yearlyPrice,
             description,
             buttonText,
             buttonLink,
@@ -103,7 +148,7 @@ export const PricingSection = () => {
           }) => (
             <Card
               key={title}
-              className="border border-border bg-background"
+              className={`border border-border bg-background ${popular===1 ? 'bg-[#F3F0FE] border-brand shadow-lg' : ''}`}
               // className={
               //   popular === PopularPlan?.YES
               //     ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]"
@@ -111,7 +156,7 @@ export const PricingSection = () => {
               // }
             >
 
-                {popular===PopularPlan?.YES && 
+                {/* {popular===PopularPlan?.YES && 
                   <div className="relative top-8 md:top-4 left-2">
                     <Badge 
                       variant="paper" 
@@ -121,7 +166,7 @@ export const PricingSection = () => {
                       Popular
                     </Badge>
                   </div>
-                }
+                } */}
               <CardHeader className="">
 
                 <CardTitle className="pb-2">{title}</CardTitle>
@@ -133,8 +178,23 @@ export const PricingSection = () => {
                 <div>
                   
                   <div>
-                    <span className="text-3xl font-bold">{price === 0 ? 'Free' : price === -1 ? '--' : `$${price}`}</span>
-                    {price > 0 && <span className="text-muted-foreground"> /month</span>}
+                    <span className="text-3xl font-bold">
+                    {isYearly
+                      ? (yearlyPrice === 0 ? 'Free' : yearlyPrice === -1 ? '--' : null)
+                      : (monthlyPrice === 0 ? 'Free' : monthlyPrice === -1 ? '--' : null)
+                    }
+                    {monthlyPrice!==0 && <><span className=" text-[1.625rem]">$</span><Odometer 
+                      duration={500}
+                      value={isYearly ? yearlyPrice : monthlyPrice} 
+                      format="(.ddd),dd"
+                    /></>}
+                    
+                    </span>
+                    {(isYearly ? yearlyPrice : monthlyPrice) > 0 && 
+                      <span className="text-muted-foreground">
+                        /month
+                      </span>
+                    }
                   </div>
                   
                  {buttonLink === "" ?<Button
@@ -146,7 +206,7 @@ export const PricingSection = () => {
                 </Button>: <Button
                     asChild
                     variant={
-                      popular === PopularPlan?.YES ? "default" : "outline"
+                      popular === PopularPlan?.YES ? "brand" : "outline"
                     }
                     className="w-full mt-6"
                   >
