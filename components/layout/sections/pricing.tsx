@@ -13,9 +13,14 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import { Check } from "lucide-react";
-import Odometer from 'react-odometerjs';
-import 'odometer/themes/odometer-theme-default.css';
+// import Odometer from 'react-odometerjs';
+// import dynamic from 'next/dynamic'
+// import 'odometer/themes/odometer-theme-default.css';
 
+// const Odometer = dynamic(import('react-odometerjs'), {
+//   ssr: false,
+//   loading: () => <>--</>
+// });
 
 enum PopularPlan {
   NO = 0,
@@ -179,7 +184,8 @@ export const PricingSection = () => {
                   
                   <div>
                     <span className="text-3xl font-bold">
-                    {isYearly
+
+                    {/* {isYearly
                       ? (yearlyPrice === 0 ? 'Free' : yearlyPrice === -1 ? '--' : null)
                       : (monthlyPrice === 0 ? 'Free' : monthlyPrice === -1 ? '--' : null)
                     }
@@ -187,7 +193,26 @@ export const PricingSection = () => {
                       duration={500}
                       value={isYearly ? yearlyPrice : monthlyPrice} 
                       format="(.ddd),dd"
-                    /></>}
+                    /></>} */}
+
+                    {(isYearly ? yearlyPrice : monthlyPrice) > 0 ? (
+                        <>
+                          <span className="text-[1.625rem]">$</span>
+                          {/* <Odometer
+                            duration={500}
+                            value={isYearly ? yearlyPrice : monthlyPrice}
+                            format="(.ddd),dd"
+                          /> */}
+                          <span>{isYearly ? yearlyPrice : monthlyPrice}</span>
+                        </>
+                      ) : (
+                        <span>
+                          {isYearly
+                            ? yearlyPrice === 0 ? 'Free' : yearlyPrice === -1 ? '--' : null
+                            : monthlyPrice === 0 ? 'Free' : monthlyPrice === -1 ? '--' : null
+                          }
+                        </span>
+                      )}
                     
                     </span>
                     {(isYearly ? yearlyPrice : monthlyPrice) > 0 && 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://grimo.ai/apple-icon.png</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai/twitter-image.png</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai/icon.ico</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai/opengraph-image.png</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai/privacy-policy</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai/acceptable-use-policy</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai/releases</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai/refund-policy</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai/terms-of-service</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai/blog</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai/about</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai/blog/building-better-web-applications-with-modern-architecture</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://grimo.ai/blog/documents-as-task-management-interface</loc><lastmod>2025-04-16T04:00:29.384Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/apple-icon.png</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/icon.ico</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/opengraph-image.png</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/twitter-image.png</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/refund-policy</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/terms-of-service</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/blog</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/privacy-policy</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/releases</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/acceptable-use-policy</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/about</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/blog/building-better-web-applications-with-modern-architecture</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://grimo.ai/blog/documents-as-task-management-interface</loc><lastmod>2025-04-19T13:12:28.764Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
