@@ -15,7 +15,7 @@ const BentoCard = ({ icon, title, description, image, className }: BentoCardProp
   return (
     <div className={`BentoCard relative border border-border bg-background rounded overflow-hidden ${className || ''}`}>
       {/* Text Section */}
-      <div className="relative z-10 p-4 md:p-6 flex flex-col gap-2">
+      <div className="relative z-10 p-4 md:p-6 flex flex-col gap-3">
         <div className="pt-1">
           <Icon
             name={icon as any}
