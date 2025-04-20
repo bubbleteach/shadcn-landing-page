@@ -23,7 +23,7 @@ export default async function Post({ params }: Params) {
                         <span className="text-muted-foreground text-sm">{post.date}</span>
                     </div>
                 </div>
-                <div className="prose" dangerouslySetInnerHTML={{ __html: content }} />
+                <div className="prose-sm md:prose" dangerouslySetInnerHTML={{ __html: content }} />
             </main >
         // </div>
     );
