@@ -27,6 +27,7 @@ export const Computer = () => {
                 let updateCount = 0;
                 // 立即生成一次随机字符
                 setGlitchText(generateRandomChars());
+                document.body.style.overflow = 'hidden';
                 // 每100ms更新一次随机字符，最多更新 x 次
                 intervalRef.current = window.setInterval(() => {
                     updateCount++;
@@ -42,6 +43,7 @@ export const Computer = () => {
                         }
 
                         setShowGlitch(false);
+                        document.body.style.overflow = '';
                         return;
                     }
                     
@@ -88,7 +90,7 @@ export const Computer = () => {
             <div className="w-fit">
 
                 {showGlitch && (
-                    <div className=" break-all fixed opacity-70 top-0 left-0 w-screen h-screen bg-white text-green-500 font-mono overflow-hidden flex items-center justify-center z-[9999] transition-opacity duration-800 ease-in-out">
+                    <div className=" break-all fixed opacity-70 top-0 left-0 w-screen h-[200vh] bg-white text-green-500 font-mono overflow-hidden flex items-center justify-center z-[9999] transition-opacity duration-800 ease-in-out">
                         {glitchText}
                     </div>
                 )}
