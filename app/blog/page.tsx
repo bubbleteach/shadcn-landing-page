@@ -16,31 +16,41 @@ export default function Blog() {
     
     return (
         <main className='container px-4 md:px-16  mt-2 md:mt-14 w-full max-w-2xl text-foreground'>
+            {/* Blog title section */}
             <div className=" space-y-6 pb-16">
                 <h1 className=" text-4xl font-semibold">Blog</h1>
             </div>
             
-            {/* list */}
+            {/* Blog posts list container */}
             <div>
                 {posts.map((post) => (
+                    // Individual blog post card
                     <div key={post.slug} className="flex flex-col-reverse md:flex-row items-baseline py-6 md:py-16">
-                        {/* date */}
+                        {/* Post metadata section - date and author */}
                         <div className=" flex items-center md:items-start mb-2 md:flex-col gap-2 md:w-[294px] md:flex-shrink-0">
+                            {/* Post date */}
                             <div className=" text-sm text-muted-foreground">{post.date}</div>
+                            {/* Vertical divider for mobile layout */}
                             <span className="h-3 w-[1px] md:hidden bg-foreground/30"></span>
+                            {/* Post author */}
                             <div className=" text-sm text-muted-foreground md:text-foreground">{post.author}</div>
                         </div>
-                        {/* content */}
+
+                        {/* Post content section */}
                         <div className="flex flex-col gap-4 w-fit">
+                            {/* Post title with link */}
                             <div className=" flex flex-col gap-4">
                                 <Link href={`/blog/${post.slug}`} className="text-brand">
                                     <h2 className=" text-xl font-semibold text-foreground hover:text-brand">{post.title}</h2>
                                 </Link>
                             </div>
+                            {/* Post excerpt with 3-line clamp */}
                             <div className=" text-base line-clamp-3">
                                 {post.excerpt}
                             </div>
+                            {/* Post tags section - only shown if tags exist */}
                             {post.tag.length > 0 && <div className="flex flex-row gap-2 items-center">
+                                    {/* Handle both array and comma-separated string tag formats */}
                                     {Array.isArray(post.tag) 
                                         ? post.tag.map((tag) => (
                                             <Badge variant="outline" badgeColor="black" key={tag} className=" w-fit ">{tag}</Badge>
@@ -53,8 +63,8 @@ export default function Blog() {
                                     }
                                 </div>}  
                         <div>
+                            {/* Commented out "Read More" link for future use */}
                             {/* <Link href={`/blog/${post.slug}`} className="text-brand hidden md:block">Read More</Link> */}
-
                         </div>
                         </div>
                     </div>
