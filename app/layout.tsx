@@ -58,6 +58,7 @@ export default function RootLayout({
         <Script id="track-sdk" strategy="afterInteractive">
           {`(function(siteId){window.__track_sdk__=window.__track_sdk__||{temp:[],report:function(){this.temp.push([].slice.call(arguments))},};(function(doc,tagName){var ele=doc.getElementsByTagName(tagName)[0];function onLoad(){if(window.__track_sdk__){window.__track_sdk__.setDefaultConfig({siteId:siteId,})}}function insert(){var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src='https://vr.leadsnavi.com/track-sdk.js';s.onload=onLoad;ele.parentNode.insertBefore(s,ele)}insert()})(document,'script')})('5296e5ad53b64d5ab1dc705d1985713c')`}
         </Script>
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="nHtj21RWE/9ivl7rL0QfPQ" async></Script>
       </head>
       <GoogleAnalytics gaId="G-LSS1NX4GNQ" />
       <body className={cn("min-h-screen bg-sidebar-background", inter.className)}>
