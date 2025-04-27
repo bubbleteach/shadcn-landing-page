@@ -1,7 +1,4 @@
-import { Separator } from "@/components/ui/separator";
-import { ChevronsDownIcon } from "lucide-react";
 import Image from "next/image";
-import { icons } from "lucide-react";
 import XIcon from "@/components/icons/x-icon";
 import { Icon } from "@/components/ui/icon";
 import Link from "next/link";
@@ -36,7 +33,7 @@ export const FooterSection = () => {
               </li>
               <li>
                 <Link
-                  href="https://x.com/GrimoAI"
+                  href="https://x.com/GrimoAI/"
                   className="opacity-60 hover:opacity-100"
                 >
                   {/* <Icon name="Twitter" size={20} color="hsl(var(--foreground))" /> */}
@@ -68,13 +65,13 @@ export const FooterSection = () => {
             <div className="flex flex-col gap-4">
               <h3 className="font-medium text-lg">Company</h3>
               <div>
-                <Link href="/about" className="opacity-60 hover:opacity-100">
+                <Link href="/about/" className="opacity-60 hover:opacity-100">
                   About
                 </Link>
               </div>
               <div>
                 <Link
-                  href="/#features"
+                  href="/#features/"
                   className="opacity-60 hover:opacity-100"
                 >
                   Features
@@ -82,7 +79,7 @@ export const FooterSection = () => {
               </div>
 
               <div>
-                <Link href="/#pricing" className="opacity-60 hover:opacity-100">
+                <Link href="/#pricing/" className="opacity-60 hover:opacity-100">
                   Pricing
                 </Link>
               </div>
@@ -92,7 +89,7 @@ export const FooterSection = () => {
               <h3 className="font-medium text-lg">Docs</h3>
               <div>
                 <Link
-                  href="/releases"
+                  href="/releases/"
                   className="opacity-60 hover:opacity-100"
                 >
                   Releases
@@ -100,7 +97,7 @@ export const FooterSection = () => {
               </div>
               <div>
                 <Link
-                  href="/blog"
+                  href="/blog/"
                   className="opacity-60 hover:opacity-100"
                 >
                   Blog
@@ -112,7 +109,7 @@ export const FooterSection = () => {
               <h3 className="font-medium text-lg">Terms & Policies</h3>
               <div>
                 <Link
-                  href="/terms-of-service"
+                  href="/terms-of-service/"
                   className="opacity-60 hover:opacity-100"
                 >
                   Terms of Service
@@ -120,7 +117,7 @@ export const FooterSection = () => {
               </div>
               <div>
                 <Link
-                  href="/acceptable-use-policy"
+                  href="/acceptable-use-policy/"
                   className="opacity-60 hover:opacity-100"
                 >
                   Acceptable Use Policy
@@ -128,7 +125,7 @@ export const FooterSection = () => {
               </div>
               <div>
                 <Link
-                  href="/privacy-policy"
+                  href="/privacy-policy/"
                   className="opacity-60 hover:opacity-100"
                 >
                   Privacy Policy
@@ -137,7 +134,7 @@ export const FooterSection = () => {
 
               <div>
                 <Link
-                  href="/refund-policy"
+                  href="/refund-policy/"
                   className="opacity-60 hover:opacity-100"
                 >
                   Refund Policy

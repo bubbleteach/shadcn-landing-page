@@ -1,6 +1,6 @@
 "use client";
-import { ChevronsDown, Github, Menu } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { Menu } from "lucide-react";
+import React, { useEffect } from "react";
 import {
   Sheet,
   SheetContent,
@@ -12,16 +12,13 @@ import {
 import { Separator } from "../ui/separator";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "../ui/navigation-menu";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { ToggleTheme } from "./toogle-theme";
 
 interface RouteProps {
   href: string;

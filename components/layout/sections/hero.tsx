@@ -1,13 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { Icon } from "@/components/ui/icon";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Badge } from "@/components/ui/badge";
 import { Computer } from "@/components/ui/computer";
 
 export const HeroSection = () => {
@@ -36,7 +33,7 @@ export const HeroSection = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: 'url(/Grid.png)',
+          backgroundImage: 'url(/Grid.webp)',
           backgroundRepeat: 'repeat',
           backgroundSize: '1000px',
           opacity: 0.1,
@@ -107,13 +104,22 @@ export const HeroSection = () => {
           {/* producthunt badge */}
           <div className="">
             {/* <a href="https://www.producthunt.com/posts/grimo-b-eta?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-grimo&#0045;b&#0045;eta" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=945908&theme=light&t=1742975977640" alt="Grimo&#0032;&#0040;&#0058;b&#0041;eta - Cursor&#0032;for&#0032;Writing | Product Hunt" style={{width: "auto", height: "40px"}} className=" rounded-md" width="250" height="54" /></a> */}
-            <a href="https://www.producthunt.com/posts/grimo-b-eta?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-grimo&#0045;b&#0045;eta" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=945908&theme=light&period=daily&t=1743603965543" alt="Grimo&#0032;&#0040;&#0058;b&#0041;eta - Cursor&#0032;for&#0032;writing | Product Hunt" style={{width: "auto", height: "40px"}} /></a>
+            <a href="https://www.producthunt.com/posts/grimo-b-eta?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-grimo&#0045;b&#0045;eta" target="_blank">
+              <img 
+                src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=945908&theme=light&period=daily&t=1743603965543" 
+                alt="Grimo&#0032;&#0040;&#0058;b&#0041;eta - Cursor&#0032;for&#0032;writing | Product Hunt" 
+                width="250"
+                height="54"
+                style={{width: "auto", height: "40px"}} 
+                className="rounded-md"
+              />
+            </a>
           </div>
 
             <Button asChild className=" w-40 font-bold group/arrow rounded-[0.4rem]">
               <Link
                 aria-label="Build Your Words"
-                href="https://beta.grimo.ai"
+                href="https://beta.grimo.ai/"
                 target="_blank"
               >
                 Build Your Words
@@ -130,15 +136,17 @@ export const HeroSection = () => {
           <div className="2xl:top-32 2xl:right-0">
             <div className="transition-transform duration-100 ease-out">
               <Image
+                priority
                 width={1024}
-                height={0}
+                height={683}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1024px"
                 className="w-[1024px] border border-border shadow-xl mx-auto rounded-lg rouded-lg leading-none items-center"
                 style={{
                   transform: `scale(${scale / 100})`,
                   transition: 'transform 0.3s ease-out'
                 }}
-                src={theme === "light" ? "/grimo/hero.png" : "/grimo/hero.png"}
-                alt="dashboard"
+                src={theme === "light" ? "/grimo/hero.webp" : "/grimo/hero.webp"}
+                alt="grimo"
               />
             </div>
             {/* <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-sidebar-background/0 via-background/50 to-background rounded-lg"></div> */}

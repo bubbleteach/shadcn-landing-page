@@ -15,7 +15,7 @@ export const CtaBanner = () => {
                 <div 
                     className="absolute w-full  top-[-1rem] left-[-2rem]  h-20 opacity-15"
                     style={{
-                        backgroundImage: 'url(/texture2.png)',
+                        backgroundImage: 'url(/texture2.webp)',
                         backgroundSize: 'contain',
                         backgroundPosition: 'left top',
                         backgroundRepeat: 'no-repeat',
@@ -44,7 +44,7 @@ export const CtaBanner = () => {
                 <Button asChild variant="outline" className=" w-40 font-bold group/arrow">
                     <Link
                     aria-label="Build Your Words"
-                    href="https://beta.grimo.ai"
+                    href="https://beta.grimo.ai/"
                     target="_blank"
                     >
                     Build Your Words
@@ -60,7 +60,7 @@ export const CtaBanner = () => {
                     <div 
                         className="absolute bottom-[-2rem] right-[-6rem] w-full h-28 opacity-10"
                         style={{
-                            backgroundImage: 'url(/texture1.png)',
+                            backgroundImage: 'url(/texture1.webp)',
                             backgroundSize: 'contain',
                             backgroundPosition: 'right bottom',
                             backgroundRepeat: 'no-repeat',
