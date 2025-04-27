@@ -112,6 +112,7 @@ export const HeroSection = () => {
                 height="54"
                 style={{width: "auto", height: "40px"}} 
                 className="rounded-md"
+                fetchPriority="low"
               />
             </a>
           </div>

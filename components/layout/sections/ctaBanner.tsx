@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export const CtaBanner = () => {
     return (
@@ -12,14 +13,18 @@ export const CtaBanner = () => {
             
             {/* Textures */}
             <div className="relative w-full">
-                <div 
-                    className="absolute w-full  top-[-1rem] left-[-2rem]  h-20 opacity-15"
+                <Image
+                    src="/texture2.webp"
+                    alt=""
+                    width={1200}
+                    height={80}
+                    className="absolute w-full top-[-1rem] left-[-2rem] h-20 opacity-15 pointer-events-none select-none"
                     style={{
-                        backgroundImage: 'url(/texture2.webp)',
-                        backgroundSize: 'contain',
-                        backgroundPosition: 'left top',
-                        backgroundRepeat: 'no-repeat',
+                        objectFit: 'contain',
+                        objectPosition: 'left top',
                     }}
+                    loading="lazy"
+                    aria-hidden="true"
                 />
             </div>
 
@@ -57,14 +62,18 @@ export const CtaBanner = () => {
                 {/* Textures */}
                 
                 <div className="relative w-full">
-                    <div 
-                        className="absolute bottom-[-2rem] right-[-6rem] w-full h-28 opacity-10"
+                    <Image
+                        src="/texture1.webp"
+                        alt=""
+                        width={1200}
+                        height={112}
+                        className="absolute bottom-[-2rem] right-[-6rem] w-full h-28 opacity-10 pointer-events-none select-none"
                         style={{
-                            backgroundImage: 'url(/texture1.webp)',
-                            backgroundSize: 'contain',
-                            backgroundPosition: 'right bottom',
-                            backgroundRepeat: 'no-repeat',
+                            objectFit: 'contain',
+                            objectPosition: 'right bottom',
                         }}
+                        loading="lazy"
+                        aria-hidden="true"
                     />
                 </div>
             </div>
