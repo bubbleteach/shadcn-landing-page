@@ -148,6 +148,8 @@ export const HeroSection = () => {
                 }}
                 src={theme === "light" ? "/grimo/hero.webp" : "/grimo/hero.webp"}
                 alt="grimo"
+                placeholder="blur"
+                blurDataURL="/grimo/hero-blur.webp"
               />
             </div>
             {/* <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-sidebar-background/0 via-background/50 to-background rounded-lg"></div> */}
