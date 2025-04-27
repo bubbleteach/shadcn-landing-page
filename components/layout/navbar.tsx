@@ -125,10 +125,14 @@ export const Navbar = () => {
         <div className="flex items-center md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Menu
+              <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="cursor-pointer md:hidden"
-              />
+                aria-label="Open navigation menu"
+                type="button"
+              >
+                <Menu />
+              </button>
             </SheetTrigger>
 
             <SheetContent

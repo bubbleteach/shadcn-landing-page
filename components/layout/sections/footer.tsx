@@ -23,6 +23,7 @@ export const FooterSection = () => {
                 <Link
                   href="https://www.linkedin.com/company/grimo-ai/"
                   className="opacity-60 hover:opacity-100"
+                  aria-label="Grimo LinkedIn"
                 >
                   <Icon
                     name="Linkedin"
@@ -35,14 +36,8 @@ export const FooterSection = () => {
                 <Link
                   href="https://x.com/GrimoAI/"
                   className="opacity-60 hover:opacity-100"
+                  aria-label="Grimo X (Twitter)"
                 >
-                  {/* <Icon name="Twitter" size={20} color="hsl(var(--foreground))" /> */}
-                  {/* <Image
-                  width={20}
-                  height={20}
-                  src="/x-twitter-brands-solid.svg"
-                  alt="X"
-                /> */}
                   <XIcon />
                 </Link>
               </li>

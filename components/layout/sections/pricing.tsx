@@ -151,7 +151,7 @@ export const PricingSection = () => {
           }) => (
             <Card
               key={title}
-              className={`border border-border bg-background ${popular===1 ? 'bg-[#F3F0FE] border-brand shadow-lg' : ''}`}
+              className={`border border-border bg-background ${popular===1 ? 'bg-[#F8F7FD] border-brand shadow-lg' : ''}`}
               // className={
               //   popular === PopularPlan?.YES
               //     ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]"
