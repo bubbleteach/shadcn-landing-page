@@ -24,7 +24,7 @@ const BentoCard = ({ icon, title, description, image, className }: BentoCardProp
             className="text-primary mb-2"
           />
         </div>
-        <h2 className="text-xl font-semibold text-foreground">{title}</h2>
+        <h2 className="text-base font-semibold text-foreground">{title}</h2>
         <div className="text-muted-foreground text-base">
           {description}
         </div>
